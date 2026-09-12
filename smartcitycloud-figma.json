@@ -1,0 +1,582 @@
+{
+  "name": "SmartCityCloud Design",
+  "lastModified": "2026-06-26T00:00:00Z",
+  "schemaVersion": 0,
+  "document": {
+    "id": "0:0",
+    "name": "Document",
+    "type": "DOCUMENT",
+    "children": [
+      {
+        "id": "1:0",
+        "name": "Login / Sign In",
+        "type": "FRAME",
+        "absoluteBoundingBox": {
+          "x": 0,
+          "y": 0,
+          "width": 1440,
+          "height": 1024
+        },
+        "fills": [
+          { "type": "SOLID", "color": { "r": 0.91, "g": 0.953, "b": 0.914 } }
+        ],
+        "children": [
+          {
+            "id": "1:1",
+            "name": "Card",
+            "type": "RECTANGLE",
+            "absoluteBoundingBox": {
+              "x": 510,
+              "y": 220,
+              "width": 420,
+              "height": 440
+            },
+            "cornerRadius": 28,
+            "fills": [{ "type": "SOLID", "color": { "r": 1, "g": 1, "b": 1 } }],
+            "strokes": [
+              {
+                "type": "SOLID",
+                "color": { "r": 0.58, "g": 0.824, "b": 0.588, "a": 0.2 }
+              }
+            ]
+          },
+          {
+            "id": "1:2",
+            "name": "Eyebrow",
+            "type": "TEXT",
+            "absoluteBoundingBox": {
+              "x": 560,
+              "y": 268,
+              "width": 250,
+              "height": 18
+            },
+            "characters": "SmartCityCloud",
+            "style": {
+              "fontFamily": "Inter",
+              "fontSize": 12,
+              "fontWeight": 700,
+              "letterSpacing": 0.18,
+              "fills": [
+                {
+                  "type": "SOLID",
+                  "color": { "r": 0.212, "g": 0.451, "b": 0.267 }
+                }
+              ]
+            }
+          },
+          {
+            "id": "1:3",
+            "name": "Login Title",
+            "type": "TEXT",
+            "absoluteBoundingBox": {
+              "x": 560,
+              "y": 296,
+              "width": 300,
+              "height": 52
+            },
+            "characters": "Secure Login",
+            "style": {
+              "fontFamily": "Inter",
+              "fontSize": 40,
+              "fontWeight": 700,
+              "fills": [
+                {
+                  "type": "SOLID",
+                  "color": { "r": 0.11, "g": 0.286, "b": 0.137 }
+                }
+              ]
+            }
+          },
+          {
+            "id": "1:4",
+            "name": "Login Description",
+            "type": "TEXT",
+            "absoluteBoundingBox": {
+              "x": 560,
+              "y": 356,
+              "width": 320,
+              "height": 36
+            },
+            "characters": "Sign in to manage telemetry uploads, analytics, and compute jobs.",
+            "style": {
+              "fontFamily": "Inter",
+              "fontSize": 16,
+              "fontWeight": 400,
+              "fills": [
+                {
+                  "type": "SOLID",
+                  "color": { "r": 0.349, "g": 0.435, "b": 0.337 }
+                }
+              ]
+            }
+          },
+          {
+            "id": "1:5",
+            "name": "Username Label",
+            "type": "TEXT",
+            "absoluteBoundingBox": {
+              "x": 560,
+              "y": 420,
+              "width": 120,
+              "height": 18
+            },
+            "characters": "Username",
+            "style": {
+              "fontFamily": "Inter",
+              "fontSize": 14,
+              "fontWeight": 700,
+              "fills": [
+                {
+                  "type": "SOLID",
+                  "color": { "r": 0.169, "g": 0.298, "b": 0.18 }
+                }
+              ]
+            }
+          },
+          {
+            "id": "1:6",
+            "name": "Username Field",
+            "type": "RECTANGLE",
+            "absoluteBoundingBox": {
+              "x": 560,
+              "y": 446,
+              "width": 320,
+              "height": 52
+            },
+            "cornerRadius": 16,
+            "fills": [
+              {
+                "type": "SOLID",
+                "color": { "r": 0.969, "g": 0.98, "b": 0.969 }
+              }
+            ],
+            "strokes": [
+              {
+                "type": "SOLID",
+                "color": { "r": 0.561, "g": 0.765, "b": 0.565, "a": 0.45 }
+              }
+            ]
+          },
+          {
+            "id": "1:7",
+            "name": "Password Label",
+            "type": "TEXT",
+            "absoluteBoundingBox": {
+              "x": 560,
+              "y": 516,
+              "width": 120,
+              "height": 18
+            },
+            "characters": "Password",
+            "style": {
+              "fontFamily": "Inter",
+              "fontSize": 14,
+              "fontWeight": 700,
+              "fills": [
+                {
+                  "type": "SOLID",
+                  "color": { "r": 0.169, "g": 0.298, "b": 0.18 }
+                }
+              ]
+            }
+          },
+          {
+            "id": "1:8",
+            "name": "Password Field",
+            "type": "RECTANGLE",
+            "absoluteBoundingBox": {
+              "x": 560,
+              "y": 542,
+              "width": 320,
+              "height": 52
+            },
+            "cornerRadius": 16,
+            "fills": [
+              {
+                "type": "SOLID",
+                "color": { "r": 0.969, "g": 0.98, "b": 0.969 }
+              }
+            ],
+            "strokes": [
+              {
+                "type": "SOLID",
+                "color": { "r": 0.561, "g": 0.765, "b": 0.565, "a": 0.45 }
+              }
+            ]
+          },
+          {
+            "id": "1:9",
+            "name": "Sign In Button",
+            "type": "RECTANGLE",
+            "absoluteBoundingBox": {
+              "x": 560,
+              "y": 612,
+              "width": 320,
+              "height": 52
+            },
+            "cornerRadius": 18,
+            "fills": [
+              {
+                "type": "GRADIENT_LINEAR",
+                "gradientHandlePositions": [
+                  { "x": 0.0, "y": 0.0 },
+                  { "x": 1.0, "y": 0.0 }
+                ],
+                "gradientStops": [
+                  {
+                    "position": 0,
+                    "color": { "r": 0.173, "g": 0.478, "b": 0.224, "a": 1 }
+                  },
+                  {
+                    "position": 1,
+                    "color": { "r": 0.4, "g": 0.705, "b": 0.329, "a": 1 }
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "id": "1:10",
+            "name": "Sign In Text",
+            "type": "TEXT",
+            "absoluteBoundingBox": {
+              "x": 650,
+              "y": 626,
+              "width": 100,
+              "height": 24
+            },
+            "characters": "Sign in",
+            "style": {
+              "fontFamily": "Inter",
+              "fontSize": 16,
+              "fontWeight": 700,
+              "fills": [
+                { "type": "SOLID", "color": { "r": 1, "g": 1, "b": 1 } }
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "id": "2:0",
+        "name": "Dashboard",
+        "type": "FRAME",
+        "absoluteBoundingBox": {
+          "x": 0,
+          "y": 1100,
+          "width": 1440,
+          "height": 1600
+        },
+        "fills": [
+          { "type": "SOLID", "color": { "r": 0.91, "g": 0.953, "b": 0.914 } }
+        ],
+        "children": [
+          {
+            "id": "2:1",
+            "name": "Topbar",
+            "type": "RECTANGLE",
+            "absoluteBoundingBox": {
+              "x": 40,
+              "y": 40,
+              "width": 1360,
+              "height": 120
+            },
+            "cornerRadius": 26,
+            "fills": [
+              {
+                "type": "SOLID",
+                "color": { "r": 1, "g": 1, "b": 1, "a": 0.95 }
+              }
+            ],
+            "strokes": [
+              {
+                "type": "SOLID",
+                "color": { "r": 0.647, "g": 0.816, "b": 0.62, "a": 0.35 }
+              }
+            ]
+          },
+          {
+            "id": "2:2",
+            "name": "Title",
+            "type": "TEXT",
+            "absoluteBoundingBox": {
+              "x": 76,
+              "y": 60,
+              "width": 420,
+              "height": 40
+            },
+            "characters": "Sensor Evaluation Dashboard",
+            "style": {
+              "fontFamily": "Inter",
+              "fontSize": 32,
+              "fontWeight": 700,
+              "fills": [
+                {
+                  "type": "SOLID",
+                  "color": { "r": 0.082, "g": 0.251, "b": 0.118 }
+                }
+              ]
+            }
+          },
+          {
+            "id": "2:3",
+            "name": "Subtitle",
+            "type": "TEXT",
+            "absoluteBoundingBox": {
+              "x": 76,
+              "y": 104,
+              "width": 520,
+              "height": 30
+            },
+            "characters": "Analyze your sensor recordings, identify performance trends, and surface anomaly insights.",
+            "style": {
+              "fontFamily": "Inter",
+              "fontSize": 16,
+              "fontWeight": 400,
+              "fills": [
+                {
+                  "type": "SOLID",
+                  "color": { "r": 0.322, "g": 0.412, "b": 0.333 }
+                }
+              ]
+            }
+          },
+          {
+            "id": "2:4",
+            "name": "Reload Button",
+            "type": "RECTANGLE",
+            "absoluteBoundingBox": {
+              "x": 1120,
+              "y": 66,
+              "width": 140,
+              "height": 44
+            },
+            "cornerRadius": 18,
+            "fills": [{ "type": "SOLID", "color": { "r": 1, "g": 1, "b": 1 } }],
+            "strokes": [
+              {
+                "type": "SOLID",
+                "color": { "r": 0.345, "g": 0.588, "b": 0.369, "a": 0.22 }
+              }
+            ]
+          },
+          {
+            "id": "2:5",
+            "name": "Reload Text",
+            "type": "TEXT",
+            "absoluteBoundingBox": {
+              "x": 1160,
+              "y": 76,
+              "width": 80,
+              "height": 24
+            },
+            "characters": "Reload Streams",
+            "style": {
+              "fontFamily": "Inter",
+              "fontSize": 14,
+              "fontWeight": 700,
+              "fills": [
+                {
+                  "type": "SOLID",
+                  "color": { "r": 0.141, "g": 0.314, "b": 0.173 }
+                }
+              ]
+            }
+          },
+          {
+            "id": "2:6",
+            "name": "Logout Button",
+            "type": "RECTANGLE",
+            "absoluteBoundingBox": {
+              "x": 1268,
+              "y": 66,
+              "width": 132,
+              "height": 44
+            },
+            "cornerRadius": 18,
+            "fills": [{ "type": "SOLID", "color": { "r": 1, "g": 1, "b": 1 } }],
+            "strokes": [
+              {
+                "type": "SOLID",
+                "color": { "r": 0.345, "g": 0.588, "b": 0.369, "a": 0.22 }
+              }
+            ]
+          },
+          {
+            "id": "2:7",
+            "name": "Logout Text",
+            "type": "TEXT",
+            "absoluteBoundingBox": {
+              "x": 1292,
+              "y": 76,
+              "width": 84,
+              "height": 24
+            },
+            "characters": "Logout",
+            "style": {
+              "fontFamily": "Inter",
+              "fontSize": 14,
+              "fontWeight": 700,
+              "fills": [
+                {
+                  "type": "SOLID",
+                  "color": { "r": 0.141, "g": 0.314, "b": 0.173 }
+                }
+              ]
+            }
+          },
+          {
+            "id": "2:8",
+            "name": "Upload + Filter Card",
+            "type": "RECTANGLE",
+            "absoluteBoundingBox": {
+              "x": 40,
+              "y": 180,
+              "width": 1360,
+              "height": 280
+            },
+            "cornerRadius": 24,
+            "fills": [{ "type": "SOLID", "color": { "r": 1, "g": 1, "b": 1 } }],
+            "strokes": [
+              {
+                "type": "SOLID",
+                "color": { "r": 0.58, "g": 0.78, "b": 0.62, "a": 0.24 }
+              }
+            ]
+          },
+          {
+            "id": "2:9",
+            "name": "Upload Section",
+            "type": "RECTANGLE",
+            "absoluteBoundingBox": {
+              "x": 60,
+              "y": 204,
+              "width": 760,
+              "height": 232
+            },
+            "cornerRadius": 20,
+            "fills": [
+              {
+                "type": "SOLID",
+                "color": { "r": 0.973, "g": 0.986, "b": 0.973 }
+              }
+            ]
+          },
+          {
+            "id": "2:10",
+            "name": "Filter Summary Section",
+            "type": "RECTANGLE",
+            "absoluteBoundingBox": {
+              "x": 840,
+              "y": 204,
+              "width": 540,
+              "height": 232
+            },
+            "cornerRadius": 20,
+            "fills": [
+              {
+                "type": "SOLID",
+                "color": { "r": 0.945, "g": 0.973, "b": 0.945, "a": 0.95 }
+              }
+            ],
+            "strokes": [
+              {
+                "type": "SOLID",
+                "color": { "r": 0.549, "g": 0.769, "b": 0.392, "a": 0.24 }
+              }
+            ]
+          },
+          {
+            "id": "2:11",
+            "name": "Action Row",
+            "type": "RECTANGLE",
+            "absoluteBoundingBox": {
+              "x": 40,
+              "y": 480,
+              "width": 1360,
+              "height": 80
+            },
+            "cornerRadius": 22,
+            "fills": [{ "type": "SOLID", "color": { "r": 1, "g": 1, "b": 1 } }]
+          },
+          {
+            "id": "2:12",
+            "name": "Summary Stats",
+            "type": "RECTANGLE",
+            "absoluteBoundingBox": {
+              "x": 40,
+              "y": 580,
+              "width": 1360,
+              "height": 120
+            },
+            "cornerRadius": 24,
+            "fills": [{ "type": "SOLID", "color": { "r": 1, "g": 1, "b": 1 } }]
+          },
+          {
+            "id": "2:13",
+            "name": "Tabs",
+            "type": "RECTANGLE",
+            "absoluteBoundingBox": {
+              "x": 40,
+              "y": 720,
+              "width": 1360,
+              "height": 64
+            },
+            "cornerRadius": 24,
+            "fills": [{ "type": "SOLID", "color": { "r": 1, "g": 1, "b": 1 } }]
+          },
+          {
+            "id": "2:14",
+            "name": "Overview Chart",
+            "type": "RECTANGLE",
+            "absoluteBoundingBox": {
+              "x": 40,
+              "y": 800,
+              "width": 660,
+              "height": 380
+            },
+            "cornerRadius": 24,
+            "fills": [
+              {
+                "type": "SOLID",
+                "color": { "r": 0.976, "g": 0.988, "b": 0.976 }
+              }
+            ],
+            "strokes": [
+              {
+                "type": "SOLID",
+                "color": { "r": 0.753, "g": 0.847, "b": 0.769, "a": 0.5 }
+              }
+            ]
+          },
+          {
+            "id": "2:15",
+            "name": "Analytics Chart",
+            "type": "RECTANGLE",
+            "absoluteBoundingBox": {
+              "x": 720,
+              "y": 800,
+              "width": 680,
+              "height": 380
+            },
+            "cornerRadius": 24,
+            "fills": [
+              {
+                "type": "SOLID",
+                "color": { "r": 0.976, "g": 0.988, "b": 0.976 }
+              }
+            ],
+            "strokes": [
+              {
+                "type": "SOLID",
+                "color": { "r": 0.753, "g": 0.847, "b": 0.769, "a": 0.5 }
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  "components": {},
+  "styles": {}
+}

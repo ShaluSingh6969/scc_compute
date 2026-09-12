@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Group Management - Smart City Cloud</title>
+    <link rel="stylesheet" href="/static/style.css" />
+  </head>
+  <body>
+    <div class="page-shell">
+      <aside class="sidebar">
+        <div class="sidebar-header">
+          <button class="sidebar-toggle" id="sidebarToggle" aria-label="Toggle sidebar">
+            <span></span>
+            <span></span>
+            <span></span>
+          </button>
+        </div>
+
+        <nav class="sidebar-nav">
+          <div class="nav-section">
+            <div class="nav-section-title">Dashboard</div>
+            <ul class="nav-items">
+              <li><a href="/" class="nav-item"><span class="nav-text">Data Import</span></a></li>
+              <li><a href="#" class="nav-item"><span class="nav-text">Report</span></a></li>
+              <li><a href="/users" class="nav-item"><span class="nav-text">User Management</span></a></li>
+              <li><a href="/roles" class="nav-item"><span class="nav-text">Role Management</span></a></li>
+            </ul>
+          </div>
+        </nav>
+      </aside>
+
+      <div class="main-content">
+        <header class="topbar">
+          <div class="topbar-brand">
+            <img class="topbar-logo" src="/static/assests/logo-kh_en.svg" alt="Smart City Cloud" />
+          </div>
+          <div class="topbar-copy">
+            <h1>Group Management</h1>
+            <p>Review configured groups and their members.</p>
+          </div>
+          <div class="topbar-actions">
+            <div class="user-avatar" id="userAvatar">
+              <span class="avatar-initial">A</span>
+            </div>
+            <button class="secondary-button" id="logoutButton">Logout</button>
+          </div>
+        </header>
+
+        <section class="users-page-grid">
+          <article class="users-table-card">
+            <div class="users-table-header">
+              <h2>Groups Summary</h2>
+              <span id="groupsCount" class="users-count">0 groups</span>
+            </div>
+            <div class="users-table-wrap">
+              <table class="users-table">
+                <thead>
+                  <tr>
+                    <th>Group</th>
+                    <th>Members</th>
+                    <th>User Count</th>
+                  </tr>
+                </thead>
+                <tbody id="groupsTableBody">
+                  <tr><td colspan="3">Loading groups...</td></tr>
+                </tbody>
+              </table>
+            </div>
+          </article>
+        </section>
+      </div>
+    </div>
+
+    <script src="/static/groups.js"></script>
+  </body>
+</html>

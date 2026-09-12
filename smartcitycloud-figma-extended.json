@@ -1,0 +1,1556 @@
+{
+  "name": "SmartCityCloud Design Extended",
+  "lastModified": "2026-06-26T00:00:00Z",
+  "schemaVersion": 0,
+  "document": {
+    "id": "0:0",
+    "name": "Document",
+    "type": "DOCUMENT",
+    "children": [
+      {
+        "id": "1:0",
+        "name": "Login / Sign In",
+        "type": "FRAME",
+        "absoluteBoundingBox": {
+          "x": 0,
+          "y": 0,
+          "width": 1440,
+          "height": 1024
+        },
+        "fills": [
+          { "type": "SOLID", "color": { "r": 0.91, "g": 0.953, "b": 0.914 } }
+        ],
+        "children": [
+          {
+            "id": "1:1",
+            "name": "Login Card",
+            "type": "FRAME",
+            "absoluteBoundingBox": {
+              "x": 510,
+              "y": 220,
+              "width": 420,
+              "height": 440
+            },
+            "cornerRadius": 28,
+            "fills": [{ "type": "SOLID", "color": { "r": 1, "g": 1, "b": 1 } }],
+            "strokes": [
+              {
+                "type": "SOLID",
+                "color": { "r": 0.58, "g": 0.824, "b": 0.588, "a": 0.2 }
+              }
+            ],
+            "children": [
+              {
+                "id": "1:1:1",
+                "name": "Branding Group",
+                "type": "GROUP",
+                "children": [
+                  {
+                    "id": "1:1:1:1",
+                    "name": "Eyebrow",
+                    "type": "TEXT",
+                    "absoluteBoundingBox": {
+                      "x": 536,
+                      "y": 248,
+                      "width": 230,
+                      "height": 18
+                    },
+                    "characters": "SmartCityCloud",
+                    "style": {
+                      "fontFamily": "Inter",
+                      "fontSize": 12,
+                      "fontWeight": 700,
+                      "letterSpacing": 0.18,
+                      "fills": [
+                        {
+                          "type": "SOLID",
+                          "color": { "r": 0.212, "g": 0.451, "b": 0.267 }
+                        }
+                      ]
+                    }
+                  },
+                  {
+                    "id": "1:1:1:2",
+                    "name": "Title",
+                    "type": "TEXT",
+                    "absoluteBoundingBox": {
+                      "x": 536,
+                      "y": 276,
+                      "width": 320,
+                      "height": 52
+                    },
+                    "characters": "Secure Login",
+                    "style": {
+                      "fontFamily": "Inter",
+                      "fontSize": 40,
+                      "fontWeight": 700,
+                      "fills": [
+                        {
+                          "type": "SOLID",
+                          "color": { "r": 0.11, "g": 0.286, "b": 0.137 }
+                        }
+                      ]
+                    }
+                  },
+                  {
+                    "id": "1:1:1:3",
+                    "name": "Description",
+                    "type": "TEXT",
+                    "absoluteBoundingBox": {
+                      "x": 536,
+                      "y": 338,
+                      "width": 328,
+                      "height": 36
+                    },
+                    "characters": "Sign in to manage telemetry uploads, analytics, and compute jobs.",
+                    "style": {
+                      "fontFamily": "Inter",
+                      "fontSize": 16,
+                      "fontWeight": 400,
+                      "fills": [
+                        {
+                          "type": "SOLID",
+                          "color": { "r": 0.349, "g": 0.435, "b": 0.337 }
+                        }
+                      ]
+                    }
+                  }
+                ]
+              },
+              {
+                "id": "1:1:2",
+                "name": "Login Form",
+                "type": "FRAME",
+                "absoluteBoundingBox": {
+                  "x": 536,
+                  "y": 384,
+                  "width": 328,
+                  "height": 262
+                },
+                "children": [
+                  {
+                    "id": "1:1:2:1",
+                    "name": "Username Label",
+                    "type": "TEXT",
+                    "absoluteBoundingBox": {
+                      "x": 536,
+                      "y": 384,
+                      "width": 120,
+                      "height": 18
+                    },
+                    "characters": "Username",
+                    "style": {
+                      "fontFamily": "Inter",
+                      "fontSize": 14,
+                      "fontWeight": 700,
+                      "fills": [
+                        {
+                          "type": "SOLID",
+                          "color": { "r": 0.169, "g": 0.298, "b": 0.18 }
+                        }
+                      ]
+                    }
+                  },
+                  {
+                    "id": "1:1:2:2",
+                    "name": "Username Field",
+                    "type": "RECTANGLE",
+                    "absoluteBoundingBox": {
+                      "x": 536,
+                      "y": 410,
+                      "width": 328,
+                      "height": 52
+                    },
+                    "cornerRadius": 16,
+                    "fills": [
+                      {
+                        "type": "SOLID",
+                        "color": { "r": 0.969, "g": 0.98, "b": 0.969 }
+                      }
+                    ],
+                    "strokes": [
+                      {
+                        "type": "SOLID",
+                        "color": {
+                          "r": 0.561,
+                          "g": 0.765,
+                          "b": 0.565,
+                          "a": 0.45
+                        }
+                      }
+                    ]
+                  },
+                  {
+                    "id": "1:1:2:3",
+                    "name": "Password Label",
+                    "type": "TEXT",
+                    "absoluteBoundingBox": {
+                      "x": 536,
+                      "y": 478,
+                      "width": 120,
+                      "height": 18
+                    },
+                    "characters": "Password",
+                    "style": {
+                      "fontFamily": "Inter",
+                      "fontSize": 14,
+                      "fontWeight": 700,
+                      "fills": [
+                        {
+                          "type": "SOLID",
+                          "color": { "r": 0.169, "g": 0.298, "b": 0.18 }
+                        }
+                      ]
+                    }
+                  },
+                  {
+                    "id": "1:1:2:4",
+                    "name": "Password Field",
+                    "type": "RECTANGLE",
+                    "absoluteBoundingBox": {
+                      "x": 536,
+                      "y": 504,
+                      "width": 328,
+                      "height": 52
+                    },
+                    "cornerRadius": 16,
+                    "fills": [
+                      {
+                        "type": "SOLID",
+                        "color": { "r": 0.969, "g": 0.98, "b": 0.969 }
+                      }
+                    ],
+                    "strokes": [
+                      {
+                        "type": "SOLID",
+                        "color": {
+                          "r": 0.561,
+                          "g": 0.765,
+                          "b": 0.565,
+                          "a": 0.45
+                        }
+                      }
+                    ]
+                  },
+                  {
+                    "id": "1:1:2:5",
+                    "name": "Sign In Button",
+                    "type": "RECTANGLE",
+                    "absoluteBoundingBox": {
+                      "x": 536,
+                      "y": 572,
+                      "width": 328,
+                      "height": 52
+                    },
+                    "cornerRadius": 18,
+                    "fills": [
+                      {
+                        "type": "GRADIENT_LINEAR",
+                        "gradientHandlePositions": [
+                          { "x": 0, "y": 0 },
+                          { "x": 1, "y": 0 }
+                        ],
+                        "gradientStops": [
+                          {
+                            "position": 0,
+                            "color": {
+                              "r": 0.173,
+                              "g": 0.478,
+                              "b": 0.224,
+                              "a": 1
+                            }
+                          },
+                          {
+                            "position": 1,
+                            "color": {
+                              "r": 0.4,
+                              "g": 0.705,
+                              "b": 0.329,
+                              "a": 1
+                            }
+                          }
+                        ]
+                      }
+                    ]
+                  },
+                  {
+                    "id": "1:1:2:6",
+                    "name": "Sign In Text",
+                    "type": "TEXT",
+                    "absoluteBoundingBox": {
+                      "x": 668,
+                      "y": 586,
+                      "width": 80,
+                      "height": 24
+                    },
+                    "characters": "Sign in",
+                    "style": {
+                      "fontFamily": "Inter",
+                      "fontSize": 16,
+                      "fontWeight": 700,
+                      "fills": [
+                        { "type": "SOLID", "color": { "r": 1, "g": 1, "b": 1 } }
+                      ]
+                    }
+                  },
+                  {
+                    "id": "1:1:2:7",
+                    "name": "Hint Text",
+                    "type": "TEXT",
+                    "absoluteBoundingBox": {
+                      "x": 536,
+                      "y": 636,
+                      "width": 328,
+                      "height": 24
+                    },
+                    "characters": "Use admin / 123456 for initial access.",
+                    "style": {
+                      "fontFamily": "Inter",
+                      "fontSize": 14,
+                      "fontWeight": 400,
+                      "fills": [
+                        {
+                          "type": "SOLID",
+                          "color": { "r": 0.292, "g": 0.404, "b": 0.314 }
+                        }
+                      ]
+                    }
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "2:0",
+        "name": "Dashboard",
+        "type": "FRAME",
+        "absoluteBoundingBox": {
+          "x": 0,
+          "y": 1120,
+          "width": 1440,
+          "height": 1600
+        },
+        "fills": [
+          { "type": "SOLID", "color": { "r": 0.91, "g": 0.953, "b": 0.914 } }
+        ],
+        "children": [
+          {
+            "id": "2:1",
+            "name": "Topbar",
+            "type": "FRAME",
+            "absoluteBoundingBox": {
+              "x": 40,
+              "y": 40,
+              "width": 1360,
+              "height": 120
+            },
+            "cornerRadius": 26,
+            "fills": [
+              {
+                "type": "SOLID",
+                "color": { "r": 1, "g": 1, "b": 1, "a": 0.95 }
+              }
+            ],
+            "strokes": [
+              {
+                "type": "SOLID",
+                "color": { "r": 0.647, "g": 0.816, "b": 0.62, "a": 0.35 }
+              }
+            ],
+            "children": [
+              {
+                "id": "2:1:1",
+                "name": "Topbar Text Group",
+                "type": "GROUP",
+                "children": [
+                  {
+                    "id": "2:1:1:1",
+                    "name": "Dashboard Title",
+                    "type": "TEXT",
+                    "absoluteBoundingBox": {
+                      "x": 76,
+                      "y": 56,
+                      "width": 470,
+                      "height": 34
+                    },
+                    "characters": "Sensor Evaluation Dashboard",
+                    "style": {
+                      "fontFamily": "Inter",
+                      "fontSize": 32,
+                      "fontWeight": 700,
+                      "fills": [
+                        {
+                          "type": "SOLID",
+                          "color": { "r": 0.082, "g": 0.251, "b": 0.118 }
+                        }
+                      ]
+                    }
+                  },
+                  {
+                    "id": "2:1:1:2",
+                    "name": "Topbar Subtitle",
+                    "type": "TEXT",
+                    "absoluteBoundingBox": {
+                      "x": 76,
+                      "y": 94,
+                      "width": 600,
+                      "height": 24
+                    },
+                    "characters": "Analyze your sensor recordings, identify performance trends, and surface anomaly insights.",
+                    "style": {
+                      "fontFamily": "Inter",
+                      "fontSize": 16,
+                      "fontWeight": 400,
+                      "fills": [
+                        {
+                          "type": "SOLID",
+                          "color": { "r": 0.322, "g": 0.412, "b": 0.333 }
+                        }
+                      ]
+                    }
+                  }
+                ]
+              },
+              {
+                "id": "2:1:2",
+                "name": "Action Buttons Group",
+                "type": "GROUP",
+                "children": [
+                  {
+                    "id": "2:1:2:1",
+                    "name": "Reload Button",
+                    "type": "FRAME",
+                    "absoluteBoundingBox": {
+                      "x": 1120,
+                      "y": 66,
+                      "width": 140,
+                      "height": 44
+                    },
+                    "cornerRadius": 18,
+                    "fills": [
+                      { "type": "SOLID", "color": { "r": 1, "g": 1, "b": 1 } }
+                    ],
+                    "strokes": [
+                      {
+                        "type": "SOLID",
+                        "color": {
+                          "r": 0.345,
+                          "g": 0.588,
+                          "b": 0.369,
+                          "a": 0.22
+                        }
+                      }
+                    ],
+                    "children": [
+                      {
+                        "id": "2:1:2:1:1",
+                        "name": "Reload Text",
+                        "type": "TEXT",
+                        "absoluteBoundingBox": {
+                          "x": 1160,
+                          "y": 76,
+                          "width": 80,
+                          "height": 24
+                        },
+                        "characters": "Reload Streams",
+                        "style": {
+                          "fontFamily": "Inter",
+                          "fontSize": 14,
+                          "fontWeight": 700,
+                          "fills": [
+                            {
+                              "type": "SOLID",
+                              "color": { "r": 0.141, "g": 0.314, "b": 0.173 }
+                            }
+                          ]
+                        }
+                      }
+                    ]
+                  },
+                  {
+                    "id": "2:1:2:2",
+                    "name": "Logout Button",
+                    "type": "FRAME",
+                    "absoluteBoundingBox": {
+                      "x": 1268,
+                      "y": 66,
+                      "width": 132,
+                      "height": 44
+                    },
+                    "cornerRadius": 18,
+                    "fills": [
+                      { "type": "SOLID", "color": { "r": 1, "g": 1, "b": 1 } }
+                    ],
+                    "strokes": [
+                      {
+                        "type": "SOLID",
+                        "color": {
+                          "r": 0.345,
+                          "g": 0.588,
+                          "b": 0.369,
+                          "a": 0.22
+                        }
+                      }
+                    ],
+                    "children": [
+                      {
+                        "id": "2:1:2:2:1",
+                        "name": "Logout Text",
+                        "type": "TEXT",
+                        "absoluteBoundingBox": {
+                          "x": 1298,
+                          "y": 76,
+                          "width": 84,
+                          "height": 24
+                        },
+                        "characters": "Logout",
+                        "style": {
+                          "fontFamily": "Inter",
+                          "fontSize": 14,
+                          "fontWeight": 700,
+                          "fills": [
+                            {
+                              "type": "SOLID",
+                              "color": { "r": 0.141, "g": 0.314, "b": 0.173 }
+                            }
+                          ]
+                        }
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "id": "2:2",
+            "name": "Control Panel",
+            "type": "FRAME",
+            "absoluteBoundingBox": {
+              "x": 40,
+              "y": 180,
+              "width": 1360,
+              "height": 280
+            },
+            "cornerRadius": 24,
+            "fills": [{ "type": "SOLID", "color": { "r": 1, "g": 1, "b": 1 } }],
+            "strokes": [
+              {
+                "type": "SOLID",
+                "color": { "r": 0.58, "g": 0.78, "b": 0.62, "a": 0.24 }
+              }
+            ],
+            "children": [
+              {
+                "id": "2:2:1",
+                "name": "Upload Section",
+                "type": "FRAME",
+                "absoluteBoundingBox": {
+                  "x": 60,
+                  "y": 196,
+                  "width": 760,
+                  "height": 232
+                },
+                "cornerRadius": 20,
+                "fills": [
+                  {
+                    "type": "SOLID",
+                    "color": { "r": 0.973, "g": 0.986, "b": 0.973 }
+                  }
+                ],
+                "children": [
+                  {
+                    "id": "2:2:1:1",
+                    "name": "Upload Title",
+                    "type": "TEXT",
+                    "absoluteBoundingBox": {
+                      "x": 76,
+                      "y": 214,
+                      "width": 220,
+                      "height": 28
+                    },
+                    "characters": "Upload telemetry",
+                    "style": {
+                      "fontFamily": "Inter",
+                      "fontSize": 24,
+                      "fontWeight": 700,
+                      "fills": [
+                        {
+                          "type": "SOLID",
+                          "color": { "r": 0.102, "g": 0.349, "b": 0.208 }
+                        }
+                      ]
+                    }
+                  },
+                  {
+                    "id": "2:2:1:2",
+                    "name": "Upload Description",
+                    "type": "TEXT",
+                    "absoluteBoundingBox": {
+                      "x": 76,
+                      "y": 246,
+                      "width": 320,
+                      "height": 34
+                    },
+                    "characters": "Select a CSV file containing your sensor telemetry data.",
+                    "style": {
+                      "fontFamily": "Inter",
+                      "fontSize": 16,
+                      "fontWeight": 400,
+                      "fills": [
+                        {
+                          "type": "SOLID",
+                          "color": { "r": 0.349, "g": 0.435, "b": 0.337 }
+                        }
+                      ]
+                    }
+                  },
+                  {
+                    "id": "2:2:1:3",
+                    "name": "Upload Input",
+                    "type": "RECTANGLE",
+                    "absoluteBoundingBox": {
+                      "x": 76,
+                      "y": 290,
+                      "width": 380,
+                      "height": 54
+                    },
+                    "cornerRadius": 16,
+                    "fills": [
+                      {
+                        "type": "SOLID",
+                        "color": { "r": 0.969, "g": 0.98, "b": 0.969 }
+                      }
+                    ],
+                    "strokes": [
+                      {
+                        "type": "SOLID",
+                        "color": {
+                          "r": 0.561,
+                          "g": 0.765,
+                          "b": 0.565,
+                          "a": 0.45
+                        }
+                      }
+                    ]
+                  },
+                  {
+                    "id": "2:2:1:4",
+                    "name": "Upload Button",
+                    "type": "FRAME",
+                    "absoluteBoundingBox": {
+                      "x": 76,
+                      "y": 354,
+                      "width": 180,
+                      "height": 44
+                    },
+                    "cornerRadius": 18,
+                    "fills": [
+                      { "type": "SOLID", "color": { "r": 1, "g": 1, "b": 1 } }
+                    ],
+                    "strokes": [
+                      {
+                        "type": "SOLID",
+                        "color": {
+                          "r": 0.345,
+                          "g": 0.588,
+                          "b": 0.369,
+                          "a": 0.22
+                        }
+                      }
+                    ],
+                    "children": [
+                      {
+                        "id": "2:2:1:4:1",
+                        "name": "Upload Button Text",
+                        "type": "TEXT",
+                        "absoluteBoundingBox": {
+                          "x": 124,
+                          "y": 364,
+                          "width": 92,
+                          "height": 24
+                        },
+                        "characters": "Upload CSV",
+                        "style": {
+                          "fontFamily": "Inter",
+                          "fontSize": 14,
+                          "fontWeight": 700,
+                          "fills": [
+                            {
+                              "type": "SOLID",
+                              "color": { "r": 0.141, "g": 0.314, "b": 0.173 }
+                            }
+                          ]
+                        }
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "id": "2:2:2",
+                "name": "Filter Summary Section",
+                "type": "FRAME",
+                "absoluteBoundingBox": {
+                  "x": 840,
+                  "y": 196,
+                  "width": 540,
+                  "height": 232
+                },
+                "cornerRadius": 20,
+                "fills": [
+                  {
+                    "type": "SOLID",
+                    "color": { "r": 0.945, "g": 0.973, "b": 0.945, "a": 0.95 }
+                  }
+                ],
+                "strokes": [
+                  {
+                    "type": "SOLID",
+                    "color": { "r": 0.549, "g": 0.769, "b": 0.392, "a": 0.24 }
+                  }
+                ],
+                "children": [
+                  {
+                    "id": "2:2:2:1",
+                    "name": "Filter Title",
+                    "type": "TEXT",
+                    "absoluteBoundingBox": {
+                      "x": 860,
+                      "y": 214,
+                      "width": 180,
+                      "height": 28
+                    },
+                    "characters": "Analysis filter",
+                    "style": {
+                      "fontFamily": "Inter",
+                      "fontSize": 24,
+                      "fontWeight": 700,
+                      "fills": [
+                        {
+                          "type": "SOLID",
+                          "color": { "r": 0.102, "g": 0.349, "b": 0.208 }
+                        }
+                      ]
+                    }
+                  },
+                  {
+                    "id": "2:2:2:2",
+                    "name": "Filter Summary Text",
+                    "type": "TEXT",
+                    "absoluteBoundingBox": {
+                      "x": 860,
+                      "y": 250,
+                      "width": 420,
+                      "height": 44
+                    },
+                    "characters": "All Parameters · Z-Score Statistical Analysis · Sensitivity 3 · Altitude 100 · Battery 18 · Vibration 5",
+                    "style": {
+                      "fontFamily": "Inter",
+                      "fontSize": 16,
+                      "fontWeight": 400,
+                      "fills": [
+                        {
+                          "type": "SOLID",
+                          "color": { "r": 0.349, "g": 0.435, "b": 0.337 }
+                        }
+                      ]
+                    }
+                  },
+                  {
+                    "id": "2:2:2:3",
+                    "name": "Stream Count",
+                    "type": "TEXT",
+                    "absoluteBoundingBox": {
+                      "x": 860,
+                      "y": 298,
+                      "width": 420,
+                      "height": 24
+                    },
+                    "characters": "No streams have been loaded yet.",
+                    "style": {
+                      "fontFamily": "Inter",
+                      "fontSize": 14,
+                      "fontWeight": 500,
+                      "fills": [
+                        {
+                          "type": "SOLID",
+                          "color": { "r": 0.239, "g": 0.361, "b": 0.247 }
+                        }
+                      ]
+                    }
+                  },
+                  {
+                    "id": "2:2:2:4",
+                    "name": "Edit Filter Button",
+                    "type": "FRAME",
+                    "absoluteBoundingBox": {
+                      "x": 860,
+                      "y": 334,
+                      "width": 180,
+                      "height": 44
+                    },
+                    "cornerRadius": 18,
+                    "fills": [
+                      { "type": "SOLID", "color": { "r": 1, "g": 1, "b": 1 } }
+                    ],
+                    "strokes": [
+                      {
+                        "type": "SOLID",
+                        "color": {
+                          "r": 0.345,
+                          "g": 0.588,
+                          "b": 0.369,
+                          "a": 0.22
+                        }
+                      }
+                    ],
+                    "children": [
+                      {
+                        "id": "2:2:2:4:1",
+                        "name": "Edit Filter Text",
+                        "type": "TEXT",
+                        "absoluteBoundingBox": {
+                          "x": 900,
+                          "y": 344,
+                          "width": 108,
+                          "height": 24
+                        },
+                        "characters": "Edit filter",
+                        "style": {
+                          "fontFamily": "Inter",
+                          "fontSize": 14,
+                          "fontWeight": 700,
+                          "fills": [
+                            {
+                              "type": "SOLID",
+                              "color": { "r": 0.141, "g": 0.314, "b": 0.173 }
+                            }
+                          ]
+                        }
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "id": "2:3",
+            "name": "Action Row",
+            "type": "FRAME",
+            "absoluteBoundingBox": {
+              "x": 40,
+              "y": 480,
+              "width": 1360,
+              "height": 80
+            },
+            "cornerRadius": 22,
+            "fills": [{ "type": "SOLID", "color": { "r": 1, "g": 1, "b": 1 } }],
+            "children": [
+              {
+                "id": "2:3:1",
+                "name": "Run Compute Button",
+                "type": "FRAME",
+                "absoluteBoundingBox": {
+                  "x": 60,
+                  "y": 496,
+                  "width": 240,
+                  "height": 52
+                },
+                "cornerRadius": 18,
+                "fills": [
+                  {
+                    "type": "SOLID",
+                    "color": { "r": 0.173, "g": 0.478, "b": 0.224, "a": 1 }
+                  }
+                ],
+                "children": [
+                  {
+                    "id": "2:3:1:1",
+                    "name": "Run Compute Text",
+                    "type": "TEXT",
+                    "absoluteBoundingBox": {
+                      "x": 118,
+                      "y": 508,
+                      "width": 104,
+                      "height": 24
+                    },
+                    "characters": "Run Compute Task",
+                    "style": {
+                      "fontFamily": "Inter",
+                      "fontSize": 14,
+                      "fontWeight": 700,
+                      "fills": [
+                        { "type": "SOLID", "color": { "r": 1, "g": 1, "b": 1 } }
+                      ]
+                    }
+                  }
+                ]
+              },
+              {
+                "id": "2:3:2",
+                "name": "Save Results Button",
+                "type": "FRAME",
+                "absoluteBoundingBox": {
+                  "x": 320,
+                  "y": 496,
+                  "width": 220,
+                  "height": 52
+                },
+                "cornerRadius": 18,
+                "fills": [
+                  { "type": "SOLID", "color": { "r": 1, "g": 1, "b": 1 } }
+                ],
+                "strokes": [
+                  {
+                    "type": "SOLID",
+                    "color": { "r": 0.345, "g": 0.588, "b": 0.369, "a": 0.22 }
+                  }
+                ],
+                "children": [
+                  {
+                    "id": "2:3:2:1",
+                    "name": "Save Results Text",
+                    "type": "TEXT",
+                    "absoluteBoundingBox": {
+                      "x": 374,
+                      "y": 508,
+                      "width": 114,
+                      "height": 24
+                    },
+                    "characters": "Save Results",
+                    "style": {
+                      "fontFamily": "Inter",
+                      "fontSize": 14,
+                      "fontWeight": 700,
+                      "fills": [
+                        {
+                          "type": "SOLID",
+                          "color": { "r": 0.141, "g": 0.314, "b": 0.173 }
+                        }
+                      ]
+                    }
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "id": "2:4",
+            "name": "Summary Stats",
+            "type": "FRAME",
+            "absoluteBoundingBox": {
+              "x": 40,
+              "y": 580,
+              "width": 1360,
+              "height": 120
+            },
+            "cornerRadius": 24,
+            "fills": [{ "type": "SOLID", "color": { "r": 1, "g": 1, "b": 1 } }],
+            "children": [
+              {
+                "id": "2:4:1",
+                "name": "Stat Card 1",
+                "type": "FRAME",
+                "absoluteBoundingBox": {
+                  "x": 60,
+                  "y": 596,
+                  "width": 400,
+                  "height": 88
+                },
+                "cornerRadius": 20,
+                "fills": [
+                  {
+                    "type": "SOLID",
+                    "color": { "r": 0.973, "g": 0.986, "b": 0.973 }
+                  }
+                ],
+                "children": [
+                  {
+                    "id": "2:4:1:1",
+                    "name": "Stat Label",
+                    "type": "TEXT",
+                    "absoluteBoundingBox": {
+                      "x": 80,
+                      "y": 606,
+                      "width": 160,
+                      "height": 20
+                    },
+                    "characters": "Total readings",
+                    "style": {
+                      "fontFamily": "Inter",
+                      "fontSize": 14,
+                      "fontWeight": 700,
+                      "fills": [
+                        {
+                          "type": "SOLID",
+                          "color": { "r": 0.169, "g": 0.298, "b": 0.18 }
+                        }
+                      ]
+                    }
+                  },
+                  {
+                    "id": "2:4:1:2",
+                    "name": "Stat Value",
+                    "type": "TEXT",
+                    "absoluteBoundingBox": {
+                      "x": 80,
+                      "y": 628,
+                      "width": 160,
+                      "height": 34
+                    },
+                    "characters": "0",
+                    "style": {
+                      "fontFamily": "Inter",
+                      "fontSize": 32,
+                      "fontWeight": 700,
+                      "fills": [
+                        {
+                          "type": "SOLID",
+                          "color": { "r": 0.082, "g": 0.251, "b": 0.118 }
+                        }
+                      ]
+                    }
+                  }
+                ]
+              },
+              {
+                "id": "2:4:2",
+                "name": "Stat Card 2",
+                "type": "FRAME",
+                "absoluteBoundingBox": {
+                  "x": 520,
+                  "y": 596,
+                  "width": 400,
+                  "height": 88
+                },
+                "cornerRadius": 20,
+                "fills": [
+                  {
+                    "type": "SOLID",
+                    "color": { "r": 0.973, "g": 0.986, "b": 0.973 }
+                  }
+                ],
+                "children": [
+                  {
+                    "id": "2:4:2:1",
+                    "name": "Stat Label",
+                    "type": "TEXT",
+                    "absoluteBoundingBox": {
+                      "x": 540,
+                      "y": 606,
+                      "width": 160,
+                      "height": 20
+                    },
+                    "characters": "Anomaly rate",
+                    "style": {
+                      "fontFamily": "Inter",
+                      "fontSize": 14,
+                      "fontWeight": 700,
+                      "fills": [
+                        {
+                          "type": "SOLID",
+                          "color": { "r": 0.169, "g": 0.298, "b": 0.18 }
+                        }
+                      ]
+                    }
+                  },
+                  {
+                    "id": "2:4:2:2",
+                    "name": "Stat Value",
+                    "type": "TEXT",
+                    "absoluteBoundingBox": {
+                      "x": 540,
+                      "y": 628,
+                      "width": 160,
+                      "height": 34
+                    },
+                    "characters": "0%",
+                    "style": {
+                      "fontFamily": "Inter",
+                      "fontSize": 32,
+                      "fontWeight": 700,
+                      "fills": [
+                        {
+                          "type": "SOLID",
+                          "color": { "r": 0.082, "g": 0.251, "b": 0.118 }
+                        }
+                      ]
+                    }
+                  }
+                ]
+              },
+              {
+                "id": "2:4:3",
+                "name": "Stat Card 3",
+                "type": "FRAME",
+                "absoluteBoundingBox": {
+                  "x": 980,
+                  "y": 596,
+                  "width": 400,
+                  "height": 88
+                },
+                "cornerRadius": 20,
+                "fills": [
+                  {
+                    "type": "SOLID",
+                    "color": { "r": 0.973, "g": 0.986, "b": 0.973 }
+                  }
+                ],
+                "children": [
+                  {
+                    "id": "2:4:3:1",
+                    "name": "Stat Label",
+                    "type": "TEXT",
+                    "absoluteBoundingBox": {
+                      "x": 1000,
+                      "y": 606,
+                      "width": 160,
+                      "height": 20
+                    },
+                    "characters": "Safety status",
+                    "style": {
+                      "fontFamily": "Inter",
+                      "fontSize": 14,
+                      "fontWeight": 700,
+                      "fills": [
+                        {
+                          "type": "SOLID",
+                          "color": { "r": 0.169, "g": 0.298, "b": 0.18 }
+                        }
+                      ]
+                    }
+                  },
+                  {
+                    "id": "2:4:3:2",
+                    "name": "Stat Value",
+                    "type": "TEXT",
+                    "absoluteBoundingBox": {
+                      "x": 1000,
+                      "y": 628,
+                      "width": 160,
+                      "height": 34
+                    },
+                    "characters": "Waiting",
+                    "style": {
+                      "fontFamily": "Inter",
+                      "fontSize": 32,
+                      "fontWeight": 700,
+                      "fills": [
+                        {
+                          "type": "SOLID",
+                          "color": { "r": 0.082, "g": 0.251, "b": 0.118 }
+                        }
+                      ]
+                    }
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "id": "2:5",
+            "name": "Tabs",
+            "type": "FRAME",
+            "absoluteBoundingBox": {
+              "x": 40,
+              "y": 720,
+              "width": 1360,
+              "height": 64
+            },
+            "cornerRadius": 24,
+            "fills": [{ "type": "SOLID", "color": { "r": 1, "g": 1, "b": 1 } }],
+            "children": [
+              {
+                "id": "2:5:1",
+                "name": "Tab 1",
+                "type": "TEXT",
+                "absoluteBoundingBox": {
+                  "x": 80,
+                  "y": 734,
+                  "width": 120,
+                  "height": 24
+                },
+                "characters": "Overview",
+                "style": {
+                  "fontFamily": "Inter",
+                  "fontSize": 16,
+                  "fontWeight": 700,
+                  "fills": [
+                    {
+                      "type": "SOLID",
+                      "color": { "r": 0.082, "g": 0.251, "b": 0.118 }
+                    }
+                  ]
+                }
+              },
+              {
+                "id": "2:5:2",
+                "name": "Tab 2",
+                "type": "TEXT",
+                "absoluteBoundingBox": {
+                  "x": 250,
+                  "y": 734,
+                  "width": 120,
+                  "height": 24
+                },
+                "characters": "Analytics",
+                "style": {
+                  "fontFamily": "Inter",
+                  "fontSize": 16,
+                  "fontWeight": 500,
+                  "fills": [
+                    {
+                      "type": "SOLID",
+                      "color": { "r": 0.349, "g": 0.435, "b": 0.337 }
+                    }
+                  ]
+                }
+              },
+              {
+                "id": "2:5:3",
+                "name": "Tab 3",
+                "type": "TEXT",
+                "absoluteBoundingBox": {
+                  "x": 430,
+                  "y": 734,
+                  "width": 120,
+                  "height": 24
+                },
+                "characters": "Insights",
+                "style": {
+                  "fontFamily": "Inter",
+                  "fontSize": 16,
+                  "fontWeight": 500,
+                  "fills": [
+                    {
+                      "type": "SOLID",
+                      "color": { "r": 0.349, "g": 0.435, "b": 0.337 }
+                    }
+                  ]
+                }
+              }
+            ]
+          },
+          {
+            "id": "2:6",
+            "name": "Overview Chart Area",
+            "type": "FRAME",
+            "absoluteBoundingBox": {
+              "x": 40,
+              "y": 800,
+              "width": 660,
+              "height": 380
+            },
+            "cornerRadius": 24,
+            "fills": [
+              {
+                "type": "SOLID",
+                "color": { "r": 0.976, "g": 0.988, "b": 0.976 }
+              }
+            ],
+            "strokes": [
+              {
+                "type": "SOLID",
+                "color": { "r": 0.753, "g": 0.847, "b": 0.769, "a": 0.5 }
+              }
+            ],
+            "children": [
+              {
+                "id": "2:6:1",
+                "name": "Overview Header",
+                "type": "TEXT",
+                "absoluteBoundingBox": {
+                  "x": 76,
+                  "y": 826,
+                  "width": 260,
+                  "height": 28
+                },
+                "characters": "Operational telemetry overview",
+                "style": {
+                  "fontFamily": "Inter",
+                  "fontSize": 20,
+                  "fontWeight": 700,
+                  "fills": [
+                    {
+                      "type": "SOLID",
+                      "color": { "r": 0.082, "g": 0.251, "b": 0.118 }
+                    }
+                  ]
+                }
+              },
+              {
+                "id": "2:6:2",
+                "name": "Overview Description",
+                "type": "TEXT",
+                "absoluteBoundingBox": {
+                  "x": 76,
+                  "y": 858,
+                  "width": 520,
+                  "height": 40
+                },
+                "characters": "Run the compute task to reveal anomaly distribution, parameter insights, and trend behavior across your uploaded streams.",
+                "style": {
+                  "fontFamily": "Inter",
+                  "fontSize": 14,
+                  "fontWeight": 400,
+                  "fills": [
+                    {
+                      "type": "SOLID",
+                      "color": { "r": 0.349, "g": 0.435, "b": 0.337 }
+                    }
+                  ]
+                }
+              }
+            ]
+          },
+          {
+            "id": "2:7",
+            "name": "Analytics Chart Area",
+            "type": "FRAME",
+            "absoluteBoundingBox": {
+              "x": 720,
+              "y": 800,
+              "width": 680,
+              "height": 380
+            },
+            "cornerRadius": 24,
+            "fills": [
+              {
+                "type": "SOLID",
+                "color": { "r": 0.976, "g": 0.988, "b": 0.976 }
+              }
+            ],
+            "strokes": [
+              {
+                "type": "SOLID",
+                "color": { "r": 0.753, "g": 0.847, "b": 0.769, "a": 0.5 }
+              }
+            ],
+            "children": [
+              {
+                "id": "2:7:1",
+                "name": "Analytics Header",
+                "type": "TEXT",
+                "absoluteBoundingBox": {
+                  "x": 756,
+                  "y": 826,
+                  "width": 210,
+                  "height": 28
+                },
+                "characters": "Parameter performance",
+                "style": {
+                  "fontFamily": "Inter",
+                  "fontSize": 20,
+                  "fontWeight": 700,
+                  "fills": [
+                    {
+                      "type": "SOLID",
+                      "color": { "r": 0.082, "g": 0.251, "b": 0.118 }
+                    }
+                  ]
+                }
+              }
+            ]
+          },
+          {
+            "id": "2:8",
+            "name": "Insights Area",
+            "type": "FRAME",
+            "absoluteBoundingBox": {
+              "x": 40,
+              "y": 1200,
+              "width": 1360,
+              "height": 340
+            },
+            "cornerRadius": 24,
+            "fills": [
+              {
+                "type": "SOLID",
+                "color": { "r": 0.976, "g": 0.988, "b": 0.976 }
+              }
+            ],
+            "strokes": [
+              {
+                "type": "SOLID",
+                "color": { "r": 0.753, "g": 0.847, "b": 0.769, "a": 0.5 }
+              }
+            ],
+            "children": [
+              {
+                "id": "2:8:1",
+                "name": "Insights Header",
+                "type": "TEXT",
+                "absoluteBoundingBox": {
+                  "x": 76,
+                  "y": 1226,
+                  "width": 220,
+                  "height": 28
+                },
+                "characters": "Dashboard insights",
+                "style": {
+                  "fontFamily": "Inter",
+                  "fontSize": 20,
+                  "fontWeight": 700,
+                  "fills": [
+                    {
+                      "type": "SOLID",
+                      "color": { "r": 0.082, "g": 0.251, "b": 0.118 }
+                    }
+                  ]
+                }
+              },
+              {
+                "id": "2:8:2",
+                "name": "Insights Description",
+                "type": "TEXT",
+                "absoluteBoundingBox": {
+                  "x": 76,
+                  "y": 1266,
+                  "width": 580,
+                  "height": 36
+                },
+                "characters": "Upload your telemetry file, then run the compute task to populate charts, metrics, and anomaly details in this interactive summary area.",
+                "style": {
+                  "fontFamily": "Inter",
+                  "fontSize": 14,
+                  "fontWeight": 400,
+                  "fills": [
+                    {
+                      "type": "SOLID",
+                      "color": { "r": 0.349, "g": 0.435, "b": 0.337 }
+                    }
+                  ]
+                }
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  "components": {
+    "BUTTON/Primary": {
+      "id": "c:1",
+      "name": "Button / Primary",
+      "type": "COMPONENT",
+      "absoluteBoundingBox": { "x": 0, "y": 0, "width": 180, "height": 52 },
+      "cornerRadius": 18,
+      "fills": [
+        {
+          "type": "GRADIENT_LINEAR",
+          "gradientHandlePositions": [
+            { "x": 0, "y": 0 },
+            { "x": 1, "y": 0 }
+          ],
+          "gradientStops": [
+            {
+              "position": 0,
+              "color": { "r": 0.173, "g": 0.478, "b": 0.224, "a": 1 }
+            },
+            {
+              "position": 1,
+              "color": { "r": 0.4, "g": 0.705, "b": 0.329, "a": 1 }
+            }
+          ]
+        }
+      ],
+      "children": [
+        {
+          "id": "c:1:1",
+          "name": "Label",
+          "type": "TEXT",
+          "absoluteBoundingBox": {
+            "x": 20,
+            "y": 14,
+            "width": 140,
+            "height": 24
+          },
+          "characters": "Primary",
+          "style": {
+            "fontFamily": "Inter",
+            "fontSize": 14,
+            "fontWeight": 700,
+            "fills": [{ "type": "SOLID", "color": { "r": 1, "g": 1, "b": 1 } }]
+          }
+        }
+      ]
+    },
+    "BUTTON/Secondary": {
+      "id": "c:2",
+      "name": "Button / Secondary",
+      "type": "COMPONENT",
+      "absoluteBoundingBox": { "x": 0, "y": 0, "width": 180, "height": 52 },
+      "cornerRadius": 18,
+      "fills": [{ "type": "SOLID", "color": { "r": 1, "g": 1, "b": 1 } }],
+      "strokes": [
+        {
+          "type": "SOLID",
+          "color": { "r": 0.345, "g": 0.588, "b": 0.369, "a": 0.22 }
+        }
+      ],
+      "children": [
+        {
+          "id": "c:2:1",
+          "name": "Label",
+          "type": "TEXT",
+          "absoluteBoundingBox": {
+            "x": 20,
+            "y": 14,
+            "width": 140,
+            "height": 24
+          },
+          "characters": "Secondary",
+          "style": {
+            "fontFamily": "Inter",
+            "fontSize": 14,
+            "fontWeight": 700,
+            "fills": [
+              {
+                "type": "SOLID",
+                "color": { "r": 0.141, "g": 0.314, "b": 0.173 }
+              }
+            ]
+          }
+        }
+      ]
+    },
+    "INPUT/TextField": {
+      "id": "c:3",
+      "name": "Input / Text Field",
+      "type": "COMPONENT",
+      "absoluteBoundingBox": { "x": 0, "y": 0, "width": 328, "height": 52 },
+      "cornerRadius": 16,
+      "fills": [
+        { "type": "SOLID", "color": { "r": 0.969, "g": 0.98, "b": 0.969 } }
+      ],
+      "strokes": [
+        {
+          "type": "SOLID",
+          "color": { "r": 0.561, "g": 0.765, "b": 0.565, "a": 0.45 }
+        }
+      ]
+    }
+  },
+  "styles": {
+    "TEXT/Heading": {
+      "fontFamily": "Inter",
+      "fontSize": 32,
+      "fontWeight": 700,
+      "fills": [
+        { "type": "SOLID", "color": { "r": 0.082, "g": 0.251, "b": 0.118 } }
+      ]
+    },
+    "TEXT/Body": {
+      "fontFamily": "Inter",
+      "fontSize": 16,
+      "fontWeight": 400,
+      "fills": [
+        { "type": "SOLID", "color": { "r": 0.349, "g": 0.435, "b": 0.337 } }
+      ]
+    }
+  }
+}

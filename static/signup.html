@@ -1,0 +1,308 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sign Up - SmartCityCloud</title>
+    <link rel="stylesheet" href="/static/style.css" />
+  </head>
+  <body class="login-page">
+    <div class="login-background"></div>
+    <div class="login-overlay">
+      <div class="login-modal">
+        <div class="login-left">
+          <div class="login-left-content">
+            <svg
+              class="smart-city-logo"
+              viewBox="0 0 200 200"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <rect
+                x="80"
+                y="80"
+                width="25"
+                height="60"
+                fill="#7FD56F"
+                opacity="0.9"
+              />
+              <rect
+                x="110"
+                y="70"
+                width="20"
+                height="70"
+                fill="#8FD378"
+                opacity="0.95"
+              />
+              <rect
+                x="55"
+                y="90"
+                width="18"
+                height="50"
+                fill="#70C85F"
+                opacity="0.85"
+              />
+              <rect
+                x="135"
+                y="85"
+                width="22"
+                height="55"
+                fill="#85CF6F"
+                opacity="0.9"
+              />
+
+              <circle cx="87" cy="90" r="2" fill="#1a3a1f" opacity="0.6" />
+              <circle cx="97" cy="90" r="2" fill="#1a3a1f" opacity="0.6" />
+              <circle cx="87" cy="110" r="2" fill="#1a3a1f" opacity="0.6" />
+              <circle cx="97" cy="110" r="2" fill="#1a3a1f" opacity="0.6" />
+
+              <circle cx="40" cy="60" r="6" fill="#E8A71F" />
+              <circle cx="100" cy="50" r="6" fill="#E8A71F" />
+              <circle cx="160" cy="65" r="6" fill="#E8A71F" />
+              <circle cx="70" cy="40" r="5" fill="#4A90E2" />
+              <circle cx="140" cy="45" r="5" fill="#4A90E2" />
+
+              <line
+                x1="40"
+                y1="60"
+                x2="100"
+                y2="50"
+                stroke="#4A90E2"
+                stroke-width="1"
+                opacity="0.6"
+              />
+              <line
+                x1="100"
+                y1="50"
+                x2="160"
+                y2="65"
+                stroke="#4A90E2"
+                stroke-width="1"
+                opacity="0.6"
+              />
+              <line
+                x1="100"
+                y1="50"
+                x2="70"
+                y2="40"
+                stroke="#E8A71F"
+                stroke-width="1"
+                opacity="0.5"
+              />
+              <line
+                x1="100"
+                y1="50"
+                x2="140"
+                y2="45"
+                stroke="#E8A71F"
+                stroke-width="1"
+                opacity="0.5"
+              />
+
+              <rect
+                x="70"
+                y="145"
+                width="60"
+                height="20"
+                rx="3"
+                fill="#7FD56F"
+                opacity="0.9"
+              />
+              <circle cx="80" cy="165" r="5" fill="#3a3a3a" />
+              <circle cx="120" cy="165" r="5" fill="#3a3a3a" />
+              <rect
+                x="80"
+                y="150"
+                width="25"
+                height="8"
+                rx="2"
+                fill="#5a9a5f"
+                opacity="0.8"
+              />
+            </svg>
+
+            <div class="login-left-text">
+              <p class="login-left-label">URBAN MOBILITY DATA PLATFORM</p>
+              <h1 class="login-left-title">CE COMPUTE SERVER</h1>
+              <p class="login-left-description">
+                Create a user or student account and start managing telemetry in
+                one central workspace.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="login-right">
+          <section class="login-card">
+            <div class="login-brand">
+              <span class="login-eyebrow">CREATE ACCOUNT</span>
+              <h2 class="login-title">Sign up</h2>
+              <p class="login-subtitle">
+                Set up your account credentials and wait for super admin
+                approval.
+              </p>
+            </div>
+
+            <form id="signupForm" class="login-form signup-form">
+              <div class="form-group">
+                <label for="username">Email</label>
+                <div class="input-wrapper">
+                  <svg
+                    class="input-icon"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                  >
+                    <path
+                      d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"
+                    />
+                  </svg>
+                  <input
+                    id="username"
+                    name="username"
+                    type="text"
+                    placeholder="student@scc.tuc"
+                    autocomplete="username"
+                    required
+                  />
+                </div>
+              </div>
+
+              <div class="form-group">
+                <label for="role">Account type</label>
+                <div class="input-wrapper">
+                  <svg
+                    class="input-icon"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                  >
+                    <path
+                      d="M12 2a5 5 0 00-5 5v3H6a2 2 0 00-2 2v8a2 2 0 002 2h12a2 2 0 002-2v-8a2 2 0 00-2-2h-1V7a5 5 0 00-5-5z"
+                    />
+                  </svg>
+                  <select id="role" name="role" class="signup-select" required>
+                    <option value="user">User</option>
+                    <option value="student">Student</option>
+                  </select>
+                </div>
+              </div>
+
+              <div class="form-group">
+                <label for="password">Password</label>
+                <div class="input-wrapper">
+                  <svg
+                    class="input-icon"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                  >
+                    <path
+                      d="M12 1C6.48 1 2 5.48 2 11v10a2 2 0 002 2h16a2 2 0 002-2V11c0-5.52-4.48-10-10-10z"
+                    />
+                    <path d="M7 11h10" />
+                  </svg>
+                  <input
+                    id="password"
+                    name="password"
+                    type="password"
+                    placeholder="Create a password"
+                    autocomplete="new-password"
+                    required
+                  />
+                </div>
+              </div>
+
+              <div class="form-group">
+                <label for="confirmPassword">Confirm password</label>
+                <div class="input-wrapper">
+                  <svg
+                    class="input-icon"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                  >
+                    <path
+                      d="M12 1C6.48 1 2 5.48 2 11v10a2 2 0 002 2h16a2 2 0 002-2V11c0-5.52-4.48-10-10-10z"
+                    />
+                    <path d="M7 11h10" />
+                  </svg>
+                  <input
+                    id="confirmPassword"
+                    name="confirmPassword"
+                    type="password"
+                    placeholder="Confirm password"
+                    autocomplete="new-password"
+                    required
+                  />
+                </div>
+              </div>
+
+              <button type="submit" class="login-button">Submit request</button>
+
+              <div
+                id="signupError"
+                class="login-error"
+                aria-live="polite"
+              ></div>
+            </form>
+
+            <div class="login-footer">
+              <a href="/login" class="login-link">Back to sign in</a>
+              <a href="#" class="login-link">Forgot password?</a>
+            </div>
+
+            <div class="login-bottom-links">
+              <a href="#" class="small-link">Imprint</a>
+              <span class="link-separator">·</span>
+              <a href="#" class="small-link">Data Privacy Statement</a>
+            </div>
+          </section>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      const signupForm = document.getElementById("signupForm");
+      const signupError = document.getElementById("signupError");
+
+      signupForm.addEventListener("submit", async (event) => {
+        event.preventDefault();
+        signupError.textContent = "";
+
+        const username = document.getElementById("username").value.trim();
+        const role = document.getElementById("role").value;
+        const password = document.getElementById("password").value;
+        const confirmPassword =
+          document.getElementById("confirmPassword").value;
+
+        if (password !== confirmPassword) {
+          signupError.textContent = "Passwords do not match.";
+          return;
+        }
+
+        const response = await fetch("/signup", {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({ username, password, role }),
+        });
+
+        const result = await response.json();
+        if (!response.ok) {
+          signupError.textContent =
+            result.detail || "Account creation failed. Please try again.";
+          return;
+        }
+
+        signupError.textContent =
+          result.message ||
+          "Your request was submitted. Wait for super admin approval before logging in.";
+        signupError.style.color = "#2f7e3b";
+        signupForm.reset();
+        document.getElementById("role").value = "user";
+        setTimeout(() => {
+          window.location.href = "/login";
+        }, 1600);
+      });
+    </script>
+  </body>
+</html>

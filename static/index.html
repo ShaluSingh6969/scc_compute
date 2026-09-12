@@ -1,0 +1,807 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Smart City Cloud Task Template</title>
+    <link rel="stylesheet" href="/static/style.css" />
+  </head>
+  <body>
+    <div class="page-shell">
+      <!-- Left Sidebar Navigation -->
+      <aside class="sidebar">
+        <div class="sidebar-header">
+          <button
+            class="sidebar-toggle"
+            id="sidebarToggle"
+            aria-label="Toggle sidebar"
+          >
+            <span></span>
+            <span></span>
+            <span></span>
+          </button>
+        </div>
+
+        <nav class="sidebar-nav">
+          <div class="nav-section">
+            <div class="nav-section-title">Dashboard</div>
+            <ul class="nav-items">
+              <li>
+                <a href="#" class="nav-item active">
+                  <span class="nav-text">Data Import</span>
+                </a>
+              </li>
+              <li>
+                <a href="#" class="nav-item">
+                  <span class="nav-text">Report</span>
+                </a>
+              </li>
+              <li>
+                <a href="/users" class="nav-item">
+                  <span class="nav-text">User Management</span>
+                </a>
+              </li>
+              <li>
+                <a href="/roles" class="nav-item">
+                  <span class="nav-text">Role Management</span>
+                </a>
+              </li>
+            </ul>
+          </div>
+        </nav>
+      </aside>
+
+      <!-- Main Content Area -->
+      <div class="main-content">
+        <header class="topbar">
+          <div class="topbar-brand">
+            <img
+              class="topbar-logo"
+              src="/static/assests/logo-kh_en.svg"
+              alt="Smart City Cloud"
+            />
+          </div>
+          <div class="topbar-copy">
+            <h1>CE Computer Server</h1>
+            <p>Upload, profile, and review dataset quality.</p>
+          </div>
+          <div class="topbar-actions">
+            <div class="user-avatar" id="userAvatar">
+              <span class="avatar-initial">A</span>
+            </div>
+            <button class="secondary-button" id="logoutButton">Logout</button>
+          </div>
+        </header>
+
+        <section class="content-split-layout" aria-label="Body content split layout">
+          <div class="content-split-left">
+            <div class="sketch-panel">
+              <div class="sketch-section sketch-upload-trigger">
+                <div class="upload-import-section" id="uploadImportSection">
+                  <button type="button" class="sketch-outline-button" id="uploadImportTrigger">upload / import</button>
+                  <input
+                    type="file"
+                    id="uploadImportFileInput"
+                    accept=".csv,.xlsx,.xls"
+                    class="visually-hidden"
+                  />
+                  <p class="upload-import-note" id="uploadImportFileName">No file selected</p>
+                </div>
+              </div>
+
+              <div class="sketch-section sketch-meta-toggle-line">
+                <label class="sketch-check-label">
+                  <input type="checkbox" checked />
+                  <span>Meta Data</span>
+                </label>
+              </div>
+
+              <div class="sketch-section sketch-upload-action">
+                <button type="button" class="sketch-outline-button" id="sketchUploadButton">upload</button>
+                <p class="sketch-upload-help">Upload Meta data</p>
+              </div>
+
+              <div class="sketch-section sketch-meta-block">
+                <div class="sketch-meta-title">Meta</div>
+
+                <div class="sketch-fields-grid">
+                  <div class="sketch-field-label-cell">Data Name</div>
+                  <div class="sketch-field-input-cell">
+                    <input id="sketchDataName" class="sketch-field-input" type="text" aria-label="Data Name" />
+                  </div>
+
+                  <div class="sketch-field-label-cell">ownership</div>
+                  <div class="sketch-field-input-cell">
+                    <input id="sketchOwnership" class="sketch-field-input" type="text" aria-label="ownership" />
+                  </div>
+
+                  <div class="sketch-field-label-cell">Data description</div>
+                  <div class="sketch-field-input-cell">
+                    <input id="sketchDescription" class="sketch-field-input" type="text" aria-label="Data description" />
+                  </div>
+
+                  <div class="sketch-field-label-cell">Rows</div>
+                  <div class="sketch-field-input-cell">
+                    <input id="sketchRows" class="sketch-field-input" type="text" aria-label="Rows" />
+                  </div>
+
+                  <div class="sketch-field-label-cell">Colums</div>
+                  <div class="sketch-field-input-cell">
+                    <input id="sketchColumns" class="sketch-field-input" type="text" aria-label="Colums" />
+                  </div>
+                </div>
+
+                <div class="sketch-field-box">
+                  <div class="sketch-line-item sketch-status-line">
+                    <span>Dataset status</span>
+                    <label class="sketch-radio-line"><input type="radio" name="sketch_status" /> Processed</label>
+                    <label class="sketch-radio-line"><input type="radio" name="sketch_status" checked /> Not processed</label>
+                  </div>
+                </div>
+
+                <div class="sketch-field-box sketch-analysis-header-box">
+                  <div class="sketch-analysis-header-row">
+                    <div class="sketch-line-item sketch-accent-line">Statistical Analysis</div>
+                    <button type="button" class="sketch-outline-button sketch-filter-toggle" id="sketchFiltersToggle">Filters</button>
+                  </div>
+                </div>
+
+                <section class="sketch-filters-panel collapsed" id="sketchFiltersPanel">
+                  <div class="sketch-filters-grid">
+                    <article class="sketch-filter-card">
+                      <h4>telemetry_data:</h4>
+                      <p>Select CSV file with drone sensor telemetry data</p>
+                      <select id="sketchTelemetryData" class="sketch-filter-select">
+                        <option>AI_Eqait/Latitude</option>
+                        <option>Altitude</option>
+                        <option>Battery</option>
+                        <option>Vibration</option>
+                      </select>
+                    </article>
+
+                    <article class="sketch-filter-card">
+                      <h4>detection_method:</h4>
+                      <p>Choose anomaly detection algorithm</p>
+                      <select id="sketchDetectionMethod" class="sketch-filter-select">
+                        <option>Z-Score Statistical Analysis</option>
+                        <option>Threshold Event Detection</option>
+                      </select>
+                    </article>
+
+                    <article class="sketch-filter-card">
+                      <h4>sensitivity_level:</h4>
+                      <p>Detection sensitivity (1=very sensitive, 10=less sensitive)</p>
+                      <div class="sketch-slider-row">
+                        <input type="range" id="sketchSensitivity" min="1" max="10" value="3" />
+                        <output id="sketchSensitivityValue">3</output>
+                      </div>
+                    </article>
+
+                    <article class="sketch-filter-card">
+                      <h4>altitude_threshold:</h4>
+                      <p>Normal altitude range maximum (meters)</p>
+                      <div class="sketch-slider-row">
+                        <input type="range" id="sketchAltitudeThreshold" min="10" max="500" value="100" />
+                        <output id="sketchAltitudeValue">100</output>
+                      </div>
+                    </article>
+
+                    <article class="sketch-filter-card">
+                      <h4>battery_critical:</h4>
+                      <p>Critical battery voltage threshold (volts)</p>
+                      <div class="sketch-slider-row">
+                        <input type="range" id="sketchBatteryCritical" min="10" max="30" value="18" />
+                        <output id="sketchBatteryValue">18</output>
+                      </div>
+                    </article>
+
+                    <article class="sketch-filter-card">
+                      <h4>vibration_limit:</h4>
+                      <p>Maximum normal vibration level (g-force)</p>
+                      <div class="sketch-slider-row">
+                        <input type="range" id="sketchVibrationLimit" min="1" max="15" value="5" />
+                        <output id="sketchVibrationValue">5</output>
+                      </div>
+                    </article>
+                  </div>
+                </section>
+
+                <div class="sketch-fields-grid sketch-analysis-grid">
+                  <div class="sketch-field-label-cell">Data structure for</div>
+                  <div class="sketch-field-input-cell">
+                    <select id="sketchDataStructureType" class="sketch-select sketch-select-field">
+                      <option>Supervised</option>
+                      <option>Semi-Supervised</option>
+                      <option>Self-Supervised</option>
+                      <option>Unsupervised</option>
+                    </select>
+                  </div>
+                </div>
+
+                <div class="sketch-fields-grid sketch-analysis-grid sketch-analysis-grid-wide-label">
+                  <div id="sketchDatasetStructureLabel" class="sketch-field-label-cell">Dataset structure for ML</div>
+                  <div class="sketch-field-input-cell">
+                    <select class="sketch-select sketch-select-field">
+                      <option>Classification</option>
+                      <option>Regression</option>
+                    </select>
+                  </div>
+                </div>
+
+                <div class="sketch-excel-wrap" aria-label="Dataset preview grid">
+                  <table class="sketch-excel-table">
+                    <thead>
+                      <tr>
+                        <th>#</th>
+                        <th>A</th>
+                        <th>B</th>
+                        <th>C</th>
+                        <th>D</th>
+                        <th>E</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr><th>1</th><td></td><td></td><td></td><td></td><td></td></tr>
+                      <tr><th>2</th><td></td><td></td><td></td><td></td><td></td></tr>
+                      <tr><th>3</th><td></td><td></td><td></td><td></td><td></td></tr>
+                      <tr><th>4</th><td></td><td></td><td></td><td></td><td></td></tr>
+                      <tr><th>5</th><td></td><td></td><td></td><td></td><td></td></tr>
+                    </tbody>
+                  </table>
+                </div>
+
+                <div class="sketch-line-item">Data Quality</div>
+
+                <div class="sketch-quality-grid">
+                  <label><input type="checkbox" /><span class="quality-icon quality-icon-accuracy" aria-hidden="true"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="6.5"></circle><circle cx="12" cy="12" r="2"></circle><path d="M12 3v2.5M12 18.5V21M3 12h2.5M18.5 12H21"></path></svg></span><span>Accuracy</span></label>
+                  <label><input type="checkbox" /><span class="quality-icon quality-icon-consistency" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M7 7h10M7 12h10M7 17h10"></path><circle cx="5" cy="7" r="1.4"></circle><circle cx="19" cy="12" r="1.4"></circle><circle cx="5" cy="17" r="1.4"></circle></svg></span><span>Consistency</span></label>
+                  <label><input type="checkbox" /><span class="quality-icon quality-icon-traceability" aria-hidden="true"><svg viewBox="0 0 24 24"><circle cx="5" cy="6" r="2"></circle><circle cx="19" cy="6" r="2"></circle><circle cx="12" cy="18" r="2"></circle><path d="M7 6h10M6.5 7.5l4 8M17.5 7.5l-4 8"></path></svg></span><span>Traceability</span></label>
+                  <label><input type="checkbox" /><span class="quality-icon quality-icon-completeness" aria-hidden="true"><svg viewBox="0 0 24 24"><rect x="4" y="5" width="16" height="14" rx="2"></rect><path d="M8 10l2 2 4-4M8 15h8"></path></svg></span><span>Completeness</span></label>
+                  <label><input type="checkbox" /><span class="quality-icon quality-icon-timeliness" aria-hidden="true"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="8"></circle><path d="M12 8v5l3 2"></path></svg></span><span>Timeliness</span></label>
+                  <label><input type="checkbox" /><span class="quality-icon quality-icon-auditability" aria-hidden="true"><svg viewBox="0 0 24 24"><rect x="6" y="4" width="12" height="16" rx="2"></rect><path d="M9 4.8h6M9 10h6M9 14h4"></path></svg></span><span>Auditability</span></label>
+                </div>
+
+                <div class="sketch-actions-row">
+                  <button type="button" class="sketch-outline-button">Save</button>
+                  <button type="button" class="sketch-outline-button">Cancel</button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="content-split-right">
+            <h3 class="right-row-title">Results</h3>
+            <div class="results-steps" aria-label="Results step flow">
+              <div class="result-step-row">
+                <div class="result-step-item result-step-01"><span>01</span></div>
+                <span class="result-step-label">Upload</span>
+              </div>
+              <div class="result-step-row">
+                <div class="result-step-item result-step-02"><span>02</span></div>
+                <span class="result-step-label">Validate</span>
+              </div>
+              <div class="result-step-row">
+                <div class="result-step-item result-step-03"><span>03</span></div>
+                <span class="result-step-label">Analyze</span>
+              </div>
+              <div class="result-step-row">
+                <div class="result-step-item result-step-04"><span>04</span></div>
+                <span class="result-step-label">Review</span>
+              </div>
+              <div class="result-step-row">
+                <div class="result-step-item result-step-05"><span>05</span></div>
+                <span class="result-step-label">Finalize</span>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <div class="legacy-content">
+
+        <section class="dashboard-shell">
+          <article class="dashboard-panel dashboard-panel-left">
+            <div class="upload-card compact-upload-card">
+              <div class="upload-section">
+                <h2>Upload / Import</h2>
+                <p>Choose a source file and prepare metadata before saving.</p>
+                <div class="file-input">
+                  <input
+                    type="file"
+                    id="csvUpload"
+                    accept=".csv,.tsv,.xlsx,.xls,.json"
+                  />
+                </div>
+                <div class="upload-actions upload-actions-inline">
+                  <button class="secondary-button" id="uploadCsv">
+                    Upload / Import
+                  </button>
+                  <button class="secondary-button" type="button" id="openFilterModal">
+                    Meta Setup
+                  </button>
+                  <span class="upload-note-inline" id="uploadFileInfo">
+                    Supported: CSV, Excel, TSV, JSON
+                  </span>
+                </div>
+              </div>
+            </div>
+
+            <label class="meta-toggle">
+              <input type="checkbox" id="metaDataToggle" />
+              <span>Meta Data</span>
+            </label>
+
+            <section class="meta-section collapsed" id="metaSection">
+              <div class="chart-card-header">
+                <h3>Meta</h3>
+                <p>Capture dataset details, structure, and quality markers.</p>
+              </div>
+
+              <div class="meta-layout">
+                <div class="meta-card meta-card-wide metadata-inline-grid">
+                  <div class="meta-inline-field">
+                    <label id="metadataNameLabel">Data Name</label>
+                    <strong id="metadataNameValue">Dataset</strong>
+                  </div>
+                  <div class="meta-inline-field">
+                    <label id="metadataOwnershipLabel">Ownership</label>
+                    <strong id="metadataOwnershipValue">Owner</strong>
+                  </div>
+                </div>
+
+                <div class="meta-card meta-card-wide">
+                  <label for="dataDescription">Data Description</label>
+                  <textarea
+                    id="dataDescription"
+                    rows="4"
+                    placeholder="Describe the uploaded data here"
+                  ></textarea>
+                </div>
+
+                <div class="meta-card meta-stat-grid">
+                  <div class="meta-mini-card">
+                    <span>Rows</span>
+                    <strong id="profileRows">0</strong>
+                  </div>
+                  <div class="meta-mini-card">
+                    <span>Columns</span>
+                    <strong id="profileColumns">0</strong>
+                  </div>
+                </div>
+
+                <div class="meta-card meta-card-wide meta-line-item">
+                  <label for="metadataStatusValue">Dataset Status</label>
+                  <strong id="metadataStatusValue" class="status-inactive">Not Processed</strong>
+                </div>
+
+                <div class="meta-card meta-card-wide">
+                  <label>Data Status</label>
+                  <div class="status-pill-group">
+                    <label class="status-pill">
+                      <input type="radio" name="dataStatus" value="processed" />
+                      <span>Processed</span>
+                    </label>
+                    <label class="status-pill">
+                      <input type="radio" name="dataStatus" value="not_processed" checked />
+                      <span>Not Processed</span>
+                    </label>
+                  </div>
+                </div>
+
+                <div class="meta-card meta-card-wide">
+                  <label>Data Structure For</label>
+                  <div class="status-pill-group status-grid">
+                    <label class="status-pill">
+                      <input type="checkbox" class="data-type-check" value="supervised" />
+                      <span>SP</span>
+                    </label>
+                    <label class="status-pill">
+                      <input type="checkbox" class="data-type-check" value="unsupervised" />
+                      <span>UM</span>
+                    </label>
+                    <label class="status-pill">
+                      <input type="checkbox" class="data-type-check" value="simplified" />
+                      <span>SIS</span>
+                    </label>
+                    <label class="status-pill">
+                      <input type="checkbox" class="data-type-check" value="self" />
+                      <span>SELF</span>
+                    </label>
+                  </div>
+                </div>
+
+                <div class="meta-card meta-card-wide">
+                  <label for="datasetObjective">Dataset Structure For ML</label>
+                  <select id="datasetObjective" class="meta-select">
+                    <option value="classification">Classification</option>
+                    <option value="regression">Regression</option>
+                  </select>
+                </div>
+
+                <div class="meta-card meta-card-wide">
+                  <label>Statistical Analysis</label>
+                  <p class="meta-highlight">Prepared for quality profiling and anomaly checks.</p>
+                </div>
+
+                <div class="meta-card meta-card-wide sketch-grid-card">
+                  <label>Dataset Preview Structure</label>
+                  <div class="sketch-grid" aria-hidden="true">
+                    <span></span><span></span><span></span><span></span><span></span>
+                    <span></span><span></span><span></span><span></span><span></span>
+                  </div>
+                </div>
+
+                <div class="meta-card meta-summary-box">
+                  <div class="meta-mini-card">
+                    <span>Files loaded</span>
+                    <strong id="profileFiles">0</strong>
+                  </div>
+                  <div class="meta-mini-card">
+                    <span>Missing cells</span>
+                    <strong id="profileMissing">0</strong>
+                  </div>
+                  <div class="meta-mini-card">
+                    <span>Duplicate rows</span>
+                    <strong id="profileDuplicates">0</strong>
+                  </div>
+                  <div class="meta-mini-card">
+                    <span>Quality score</span>
+                    <strong id="profileQualityScore">0%</strong>
+                    <small id="profileQualityLabel">Needs review</small>
+                  </div>
+                </div>
+
+                <div class="meta-card meta-card-wide quality-flag-panel">
+                  <h4>Quality Flags</h4>
+                  <ul class="quality-flag-list" id="profileFlags">
+                    <li class="quality-flag-item muted">No data loaded yet.</li>
+                  </ul>
+                </div>
+
+                <div class="meta-card meta-card-wide">
+                  <label>Data Quality Checks</label>
+                  <div class="sketch-check-grid">
+                    <label class="task-item sketch-task-item">
+                      <input type="checkbox" class="meta-quality-check" />
+                      <span>Completeness</span>
+                    </label>
+                    <label class="task-item sketch-task-item">
+                      <input type="checkbox" class="meta-quality-check" />
+                      <span>Schema</span>
+                    </label>
+                    <label class="task-item sketch-task-item">
+                      <input type="checkbox" class="meta-quality-check" />
+                      <span>Duplicates</span>
+                    </label>
+                    <label class="task-item sketch-task-item">
+                      <input type="checkbox" class="meta-quality-check" />
+                      <span>Consistency</span>
+                    </label>
+                    <label class="task-item sketch-task-item">
+                      <input type="checkbox" class="meta-quality-check" />
+                      <span>Outliers</span>
+                    </label>
+                    <label class="task-item sketch-task-item">
+                      <input type="checkbox" class="meta-quality-check" />
+                      <span>Freshness</span>
+                    </label>
+                  </div>
+                </div>
+
+                <p id="filterSummary" class="visually-hidden">Filter settings</p>
+
+                <div class="meta-actions-row meta-card meta-card-wide">
+                  <button class="primary-button" id="metaSaveButton">
+                    Save
+                  </button>
+                  <button class="secondary-button" type="button">Cancel</button>
+                </div>
+              </div>
+            </section>
+          </article>
+
+          <aside class="dashboard-panel dashboard-panel-right">
+            <section class="chart-card result-flow-card">
+              <div class="chart-card-header">
+                <h3>Result</h3>
+                <p>Meta Info Processing Flow</p>
+              </div>
+              <div class="result-flow-steps" aria-hidden="true">
+                <div class="result-step-box"></div>
+                <span class="result-step-arrow">↓</span>
+                <div class="result-step-box"></div>
+                <span class="result-step-arrow">↓</span>
+                <div class="result-step-box"></div>
+                <span class="result-step-arrow">↓</span>
+                <div class="result-step-box"></div>
+                <span class="result-step-arrow">↓</span>
+                <div class="result-step-box"></div>
+              </div>
+            </section>
+
+            <section class="chart-card quality-card">
+              <div class="chart-card-header">
+                <h3>Data quality snapshot</h3>
+                <p>
+                  Completeness, duplication, and empty columns refresh after
+                  each upload.
+                </p>
+              </div>
+              <div class="quality-kpis">
+                <div class="quality-kpi">
+                  <span>Missing cells</span>
+                  <strong id="qualityMissing">0</strong>
+                </div>
+                <div class="quality-kpi">
+                  <span>Empty columns</span>
+                  <strong id="qualityEmptyColumns">0</strong>
+                </div>
+                <div class="quality-kpi">
+                  <span>Numeric columns</span>
+                  <strong id="qualityNumericColumns">0</strong>
+                </div>
+                <div class="quality-kpi">
+                  <span>Categorical columns</span>
+                  <strong id="qualityCategoricalColumns">0</strong>
+                </div>
+              </div>
+              <ul class="quality-flag-list compact" id="qualitySnapshotFlags">
+                <li class="quality-flag-item muted">Upload a file to inspect quality.</li>
+              </ul>
+            </section>
+
+            <section class="chart-card preview-card">
+              <div class="chart-card-header">
+                <h3>Dataset preview</h3>
+                <p>First eight records from the latest upload.</p>
+              </div>
+              <div class="preview-table-wrap">
+                <table class="preview-table">
+                  <thead id="previewTableHead"></thead>
+                  <tbody id="previewTableBody">
+                    <tr>
+                      <td>No preview available yet.</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </section>
+          </aside>
+        </section>
+
+        <section class="advanced-toggle-row">
+          <button class="secondary-button" id="toggleAdvancedPanels" type="button">
+            Show Full Analytics
+          </button>
+        </section>
+
+        <div class="modal-overlay" id="filterModal" aria-hidden="true">
+          <div class="modal-card">
+            <div class="modal-header">
+              <div>
+                <h3>Filter settings</h3>
+                <p>
+                  Adjust the analysis filters before running the compute task.
+                </p>
+              </div>
+              <button
+                class="modal-close"
+                id="closeFilterModal"
+                aria-label="Close filter modal"
+              >
+                ×
+              </button>
+            </div>
+
+            <div class="modal-body">
+              <div class="filter-field">
+                <label for="detectionMethod">Detection method</label>
+                <select id="detectionMethod">
+                  <option>Z-Score Statistical Analysis</option>
+                  <option>Threshold Event Detection</option>
+                </select>
+              </div>
+
+              <div class="filter-field">
+                <label for="sensitivityLevel">Sensitivity level</label>
+                <div class="slider-row">
+                  <input
+                    type="range"
+                    id="sensitivityLevel"
+                    min="1"
+                    max="10"
+                    value="3"
+                  />
+                  <output id="sensitivityValue">3</output>
+                </div>
+              </div>
+
+              <div class="filter-field">
+                <label for="altitudeThreshold">Altitude threshold (m)</label>
+                <div class="slider-row">
+                  <input
+                    type="range"
+                    id="altitudeThreshold"
+                    min="10"
+                    max="500"
+                    value="100"
+                  />
+                  <output id="altitudeValue">100</output>
+                </div>
+              </div>
+
+              <div class="filter-field">
+                <label for="batteryCritical">Battery critical (V)</label>
+                <div class="slider-row">
+                  <input
+                    type="range"
+                    id="batteryCritical"
+                    min="10"
+                    max="30"
+                    value="18"
+                  />
+                  <output id="batteryValue">18</output>
+                </div>
+              </div>
+
+              <div class="filter-field">
+                <label for="vibrationLimit">Vibration limit</label>
+                <div class="slider-row">
+                  <input
+                    type="range"
+                    id="vibrationLimit"
+                    min="1"
+                    max="15"
+                    value="5"
+                  />
+                  <output id="vibrationValue">5</output>
+                </div>
+              </div>
+            </div>
+
+            <div class="modal-actions">
+              <button class="secondary-button" id="cancelFilterModal">
+                Cancel
+              </button>
+              <button class="primary-button" id="saveFilterSettings">
+                Save filters
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <section class="tasks-section advanced-panel">
+          <div class="tasks-card">
+            <div class="tasks-header">
+              <h2>Quality checks</h2>
+              <p>Confirm the dataset is ready before running the compute task.</p>
+            </div>
+            <div class="tasks-grid">
+              <label class="task-item">
+                <input type="checkbox" class="task-checkbox" />
+                <span>Completeness</span>
+              </label>
+              <label class="task-item">
+                <input type="checkbox" class="task-checkbox" />
+                <span>Schema validation</span>
+              </label>
+              <label class="task-item">
+                <input type="checkbox" class="task-checkbox" />
+                <span>Duplicate scan</span>
+              </label>
+              <label class="task-item">
+                <input type="checkbox" class="task-checkbox" />
+                <span>Consistency</span>
+              </label>
+              <label class="task-item">
+                <input type="checkbox" class="task-checkbox" />
+                <span>Outlier review</span>
+              </label>
+              <label class="task-item">
+                <input type="checkbox" class="task-checkbox" />
+                <span>Freshness</span>
+              </label>
+            </div>
+          </div>
+        </section>
+
+        <section class="action-row advanced-panel">
+          <button class="primary-button" id="computeTask" disabled>
+            Run Quality Scan
+          </button>
+          <button class="secondary-button" id="saveResults">
+            Export Findings
+          </button>
+        </section>
+
+        <section class="summary-stats advanced-panel">
+          <div class="summary-stat-card">
+            <span>Total readings</span>
+            <strong id="summaryTotal">0</strong>
+          </div>
+          <div class="summary-stat-card">
+            <span>Anomaly rate</span>
+            <strong id="summaryAnomaly">0%</strong>
+          </div>
+          <div class="summary-stat-card">
+            <span>Safety status</span>
+            <strong id="summarySafety">Waiting</strong>
+          </div>
+        </section>
+
+        <section class="tabs-row advanced-panel">
+          <button class="tab-button active" data-tab="overview">
+            Overview
+          </button>
+          <button class="tab-button" data-tab="analytics">Analytics</button>
+          <button class="tab-button" data-tab="insights">Insights</button>
+        </section>
+
+        <section class="tab-content active advanced-panel" data-tab-content="overview">
+          <div class="charts-grid">
+            <div class="chart-card chart-intro">
+              <div class="chart-card-header">
+                <h2>Operational telemetry overview</h2>
+                <p>
+                  Run the compute task to reveal anomaly distribution, quality
+                  risk, parameter insights, and trend behavior across your
+                  uploaded streams.
+                </p>
+              </div>
+              <div class="chart-caption">
+                <p>
+                  <strong
+                    >Use full-width views for fast decision-making.</strong
+                  >
+                  Clean, green, and professional visual layout guides you from
+                  upload to action.
+                </p>
+              </div>
+            </div>
+
+            <div class="chart-card">
+              <div class="chart-card-header">
+                <h3>Anomaly distribution</h3>
+              </div>
+              <canvas id="anomalyChart"></canvas>
+            </div>
+          </div>
+        </section>
+
+        <section class="tab-content advanced-panel" data-tab-content="analytics">
+          <div class="charts-grid">
+            <div class="chart-card">
+              <div class="chart-card-header">
+                <h3>Parameter performance</h3>
+              </div>
+              <canvas id="performanceChart"></canvas>
+            </div>
+
+            <div class="chart-card">
+              <div class="chart-card-header">
+                <h3>Telemetry timeline</h3>
+              </div>
+              <canvas id="timelineChart"></canvas>
+            </div>
+          </div>
+        </section>
+
+        <section class="tab-content advanced-panel" data-tab-content="insights">
+          <section class="detail-panel" id="resultDetails">
+            <div class="detail-empty">
+              <h3>Dashboard briefing</h3>
+              <p>
+                Upload your telemetry file, then run the compute task to
+                populate charts, metrics, and anomaly details in this
+                interactive summary area.
+              </p>
+            </div>
+          </section>
+        </section>
+        </div>
+      </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="/static/app.js"></script>
+  </body>
+</html>

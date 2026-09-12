@@ -1,0 +1,250 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Login - SmartCityCloud</title>
+    <link rel="stylesheet" href="/static/style.css" />
+  </head>
+  <body class="login-page">
+    <div class="login-background"></div>
+    <div class="login-overlay">
+      <div class="login-modal">
+        <!-- Left Side: Branding & Illustration -->
+        <div class="login-left">
+          <div class="login-left-content">
+            <svg
+              class="smart-city-logo"
+              viewBox="0 0 200 200"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <!-- City skyline buildings -->
+              <rect
+                x="80"
+                y="80"
+                width="25"
+                height="60"
+                fill="#7FD56F"
+                opacity="0.9"
+              />
+              <rect
+                x="110"
+                y="70"
+                width="20"
+                height="70"
+                fill="#8FD378"
+                opacity="0.95"
+              />
+              <rect
+                x="55"
+                y="90"
+                width="18"
+                height="50"
+                fill="#70C85F"
+                opacity="0.85"
+              />
+              <rect
+                x="135"
+                y="85"
+                width="22"
+                height="55"
+                fill="#85CF6F"
+                opacity="0.9"
+              />
+
+              <!-- Building windows -->
+              <circle cx="87" cy="90" r="2" fill="#1a3a1f" opacity="0.6" />
+              <circle cx="97" cy="90" r="2" fill="#1a3a1f" opacity="0.6" />
+              <circle cx="87" cy="110" r="2" fill="#1a3a1f" opacity="0.6" />
+              <circle cx="97" cy="110" r="2" fill="#1a3a1f" opacity="0.6" />
+
+              <!-- IoT Devices/Nodes -->
+              <circle cx="40" cy="60" r="6" fill="#E8A71F" />
+              <circle cx="100" cy="50" r="6" fill="#E8A71F" />
+              <circle cx="160" cy="65" r="6" fill="#E8A71F" />
+              <circle cx="70" cy="40" r="5" fill="#4A90E2" />
+              <circle cx="140" cy="45" r="5" fill="#4A90E2" />
+
+              <!-- Connection lines -->
+              <line
+                x1="40"
+                y1="60"
+                x2="100"
+                y2="50"
+                stroke="#4A90E2"
+                stroke-width="1"
+                opacity="0.6"
+              />
+              <line
+                x1="100"
+                y1="50"
+                x2="160"
+                y2="65"
+                stroke="#4A90E2"
+                stroke-width="1"
+                opacity="0.6"
+              />
+              <line
+                x1="100"
+                y1="50"
+                x2="70"
+                y2="40"
+                stroke="#E8A71F"
+                stroke-width="1"
+                opacity="0.5"
+              />
+              <line
+                x1="100"
+                y1="50"
+                x2="140"
+                y2="45"
+                stroke="#E8A71F"
+                stroke-width="1"
+                opacity="0.5"
+              />
+
+              <!-- Car at bottom -->
+              <rect
+                x="70"
+                y="145"
+                width="60"
+                height="20"
+                rx="3"
+                fill="#7FD56F"
+                opacity="0.9"
+              />
+              <circle cx="80" cy="165" r="5" fill="#3a3a3a" />
+              <circle cx="120" cy="165" r="5" fill="#3a3a3a" />
+              <rect
+                x="80"
+                y="150"
+                width="25"
+                height="8"
+                rx="2"
+                fill="#5a9a5f"
+                opacity="0.8"
+              />
+            </svg>
+
+            <div class="login-left-text">
+              <p class="login-left-label">URBAN MOBILITY DATA PLATFORM</p>
+              <h1 class="login-left-title">CE Computer Server</h1>
+              <p class="login-left-description">
+                Access vehicle, sensor, token, and recording management from one
+                central workspace.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Right Side: Login Form -->
+        <div class="login-right">
+          <section class="login-card">
+            <div class="login-brand">
+              <span class="login-eyebrow">SECURE ACCESS</span>
+              <h2 class="login-title">Sign in</h2>
+              <p class="login-subtitle">
+                Use your account credential to continue.
+              </p>
+            </div>
+
+            <form id="loginForm" class="login-form">
+              <div class="form-group">
+                <label for="username">Email</label>
+                <div class="input-wrapper">
+                  <svg
+                    class="input-icon"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                  >
+                    <path
+                      d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"
+                    />
+                  </svg>
+                  <input
+                    id="username"
+                    name="username"
+                    type="text"
+                    placeholder="admin@scc.tuc"
+                    autocomplete="username"
+                    required
+                  />
+                </div>
+              </div>
+
+              <div class="form-group">
+                <label for="password">Password</label>
+                <div class="input-wrapper">
+                  <svg
+                    class="input-icon"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                  >
+                    <path
+                      d="M12 1C6.48 1 2 5.48 2 11v10a2 2 0 002 2h16a2 2 0 002-2V11c0-5.52-4.48-10-10-10z"
+                    />
+                    <path d="M7 11h10" />
+                  </svg>
+                  <input
+                    id="password"
+                    name="password"
+                    type="password"
+                    placeholder="123456"
+                    autocomplete="current-password"
+                    required
+                  />
+                </div>
+              </div>
+
+              <button type="submit" class="login-button">Login</button>
+
+              <div id="loginError" class="login-error" aria-live="polite"></div>
+            </form>
+
+            <div class="login-footer">
+              <a href="/signup" class="login-link">Create account</a>
+              <a href="#" class="login-link">Forgot password?</a>
+            </div>
+
+            <div class="login-bottom-links">
+              <a href="#" class="small-link">Imprint</a>
+              <span class="link-separator">·</span>
+              <a href="#" class="small-link">Data Privacy Statement</a>
+            </div>
+          </section>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      const loginForm = document.getElementById("loginForm");
+      const loginError = document.getElementById("loginError");
+
+      loginForm.addEventListener("submit", async (event) => {
+        event.preventDefault();
+        loginError.textContent = "";
+
+        const username = document.getElementById("username").value.trim();
+        const password = document.getElementById("password").value;
+
+        const response = await fetch("/login", {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({ username, password }),
+        });
+
+        const result = await response.json();
+        if (!response.ok) {
+          loginError.textContent =
+            result.detail || "Login failed. Please check your credentials.";
+          return;
+        }
+
+        localStorage.setItem("tucdrive_token", result.access_token);
+        window.location.href = "/";
+      });
+    </script>
+  </body>
+</html>

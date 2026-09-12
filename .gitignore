@@ -1,0 +1,44 @@
+# OS and editor
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Python
+.venv/
+venv/
+__pycache__/
+*.py[cod]
+*.pyo
+.pytest_cache/
+.mypy_cache/
+.coverage
+htmlcov/
+
+# Node and frontend
+node_modules/
+frontend/node_modules/
+frontend/.vite/
+frontend/dist/
+dist/
+
+# Runtime logs and temp
+*.log
+logs/
+*.tmp
+*.temp
+
+# Environment and secrets
+.env
+.env.*
+!.env.prod.example
+
+# Local database and persistent data
+*.db
+*.sqlite
+*.sqlite3
+
+# Project-local generated folders
+.run/

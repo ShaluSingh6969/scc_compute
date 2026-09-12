@@ -1,0 +1,14 @@
+.git
+.gitignore
+.venv
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+*.db
+.run/
+frontend/node_modules/
+frontend/dist/
+frontend/.vite/
+node_modules/
+dist/

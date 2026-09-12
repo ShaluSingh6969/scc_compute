@@ -1,0 +1,61 @@
+import { useEffect, useState } from "react";
+import { useNavigate } from "react-router-dom";
+import { apiFetch } from "../api";
+import ShellLayout from "../components/ShellLayout";
+
+export default function RolesPage() {
+  const navigate = useNavigate();
+  const [rows, setRows] = useState([]);
+
+  useEffect(() => {
+    async function load() {
+      const access = await apiFetch("/api/super-admin/access");
+      if (access.status === 401) return navigate("/login");
+      if (access.status === 403) return navigate("/");
+
+      const response = await apiFetch("/api/roles-summary");
+      if (response.ok) setRows(await response.json());
+    }
+    load();
+  }, [navigate]);
+
+  return (
+    <ShellLayout
+      title="Role Management"
+      subtitle="Overview of system roles and assigned user counts."
+      active="roles"
+    >
+      <section className="users-page-grid">
+        <article className="users-table-card">
+          <div className="users-table-header">
+            <h2>Roles Summary</h2>
+            <span className="users-count">{rows.length} roles</span>
+          </div>
+          <div className="users-table-wrap">
+            <table className="users-table">
+              <thead>
+                <tr>
+                  <th>Role</th>
+                  <th>User Count</th>
+                </tr>
+              </thead>
+              <tbody>
+                {rows.length === 0 && (
+                  <tr>
+                    <td colSpan="2">No roles available.</td>
+                  </tr>
+                )}
+                {rows.map((item) => (
+                  <tr key={item.role}>
+                    <td>{item.role}</td>
+                    <td>{item.users}</td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+          </div>
+        </article>
+      </section>
+    </ShellLayout>
+  );
+}

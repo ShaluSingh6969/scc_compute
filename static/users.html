@@ -1,0 +1,282 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>User Management - Smart City Cloud</title>
+    <link rel="stylesheet" href="/static/style.css" />
+  </head>
+  <body>
+    <div class="page-shell">
+      <aside class="sidebar">
+        <div class="sidebar-header">
+          <button
+            class="sidebar-toggle"
+            id="sidebarToggle"
+            aria-label="Toggle sidebar"
+          >
+            <span></span>
+            <span></span>
+            <span></span>
+          </button>
+        </div>
+
+        <nav class="sidebar-nav">
+          <div class="nav-section">
+            <div class="nav-section-title">Dashboard</div>
+            <ul class="nav-items">
+              <li>
+                <a href="/" class="nav-item">
+                  <span class="nav-text">Data Import</span>
+                </a>
+              </li>
+              <li>
+                <a href="#" class="nav-item">
+                  <span class="nav-text">Report</span>
+                </a>
+              </li>
+              <li>
+                <a href="/users" class="nav-item active">
+                  <span class="nav-text">User Management</span>
+                </a>
+              </li>
+              <li>
+                <a href="/roles" class="nav-item">
+                  <span class="nav-text">Role Management</span>
+                </a>
+              </li>
+            </ul>
+          </div>
+        </nav>
+      </aside>
+
+      <div class="main-content">
+        <header class="topbar">
+          <div class="topbar-brand">
+            <img
+              class="topbar-logo"
+              src="/static/assests/logo-kh_en.svg"
+              alt="Smart City Cloud"
+            />
+          </div>
+          <div class="topbar-copy">
+            <h1>User Management</h1>
+            <p>Review all registered users and their assigned roles.</p>
+          </div>
+          <div class="topbar-actions">
+            <div class="user-avatar" id="userAvatar">
+              <span class="avatar-initial">A</span>
+            </div>
+            <button class="secondary-button" id="logoutButton">Logout</button>
+          </div>
+        </header>
+
+        <section class="users-page-grid">
+          <article class="users-table-card signup-requests-card">
+            <div class="users-table-header">
+              <div>
+                <h2>Account creation requests</h2>
+                <p class="request-helper">
+                  Review new signup requests before allowing login access.
+                </p>
+              </div>
+              <span id="signupRequestsCount" class="users-count">
+                0 pending
+              </span>
+            </div>
+
+            <div id="signupRequestsNotice" class="request-notice">
+              No pending requests at the moment.
+            </div>
+
+            <div class="users-table-wrap">
+              <table class="users-table">
+                <thead>
+                  <tr>
+                    <th>ID</th>
+                    <th>Username</th>
+                    <th>Role</th>
+                    <th>Status</th>
+                    <th>Created At</th>
+                    <th>Actions</th>
+                  </tr>
+                </thead>
+                <tbody id="signupRequestsTableBody">
+                  <tr>
+                    <td colspan="6">Loading requests...</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </article>
+
+          <article class="users-table-card">
+            <div class="users-table-header">
+              <h2>Registered Users</h2>
+              <span id="usersCount" class="users-count">0 users</span>
+            </div>
+
+            <div class="users-toolbar">
+              <div class="users-toolbar-group">
+                <label for="searchUsername">Search by username</label>
+                <input
+                  id="searchUsername"
+                  type="text"
+                  placeholder="Enter username"
+                />
+              </div>
+              <div class="users-toolbar-group">
+                <label for="roleFilter">Filter by role</label>
+                <select id="roleFilter">
+                  <option value="all">All roles</option>
+                  <option value="super_admin">Super Admin</option>
+                  <option value="admin">Admin</option>
+                  <option value="user">User</option>
+                  <option value="student">Student</option>
+                </select>
+              </div>
+              <div class="users-toolbar-actions">
+                <button class="secondary-button" id="applyFilters">Apply</button>
+                <button class="secondary-button" id="clearFilters">Clear</button>
+              </div>
+            </div>
+
+            <form id="userForm" class="user-form-card">
+              <h3 id="userFormTitle">Create User</h3>
+              <div class="user-form-grid">
+                <div>
+                  <label for="formUsername">Username</label>
+                  <input id="formUsername" type="text" required />
+                </div>
+                <div>
+                  <label for="formRole">Role</label>
+                  <select id="formRole" required>
+                    <option value="super_admin">Super Admin</option>
+                    <option value="admin">Admin</option>
+                    <option value="user">User</option>
+                    <option value="student">Student</option>
+                  </select>
+                </div>
+                <div>
+                  <label for="formPassword">Password</label>
+                  <input
+                    id="formPassword"
+                    type="password"
+                    placeholder="Required for create, optional for edit"
+                  />
+                </div>
+              </div>
+              <div class="user-form-actions">
+                <button type="submit" class="primary-button" id="saveUserButton">
+                  Save User
+                </button>
+                <span id="userFormMessage" class="user-form-message"></span>
+              </div>
+            </form>
+
+            <div class="users-table-wrap">
+              <table class="users-table">
+                <thead>
+                  <tr>
+                    <th>ID</th>
+                    <th>Username</th>
+                    <th>Role</th>
+                    <th>Status</th>
+                    <th>Created At</th>
+                    <th>Actions</th>
+                  </tr>
+                </thead>
+                <tbody id="usersTableBody">
+                  <tr>
+                    <td colspan="6">Loading users...</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </article>
+        </section>
+      </div>
+    </div>
+
+    <div class="modal-overlay" id="editUserModal" aria-hidden="true">
+      <div class="modal-card user-modal-card">
+        <div class="modal-header">
+          <div>
+            <h3>Edit User</h3>
+            <p>Update username, role, or password for this account.</p>
+          </div>
+          <button
+            class="modal-close"
+            id="closeEditUserModal"
+            aria-label="Close edit user modal"
+          >
+            ×
+          </button>
+        </div>
+        <form id="editUserForm" class="modal-body user-modal-grid">
+          <input type="hidden" id="modalEditUserId" />
+          <div>
+            <label for="modalEditUsername">Username</label>
+            <input id="modalEditUsername" type="text" required />
+          </div>
+          <div>
+            <label for="modalEditRole">Role</label>
+            <select id="modalEditRole" required>
+              <option value="super_admin">Super Admin</option>
+              <option value="admin">Admin</option>
+              <option value="user">User</option>
+              <option value="student">Student</option>
+            </select>
+          </div>
+          <div>
+            <label for="modalEditPassword">New Password</label>
+            <input
+              id="modalEditPassword"
+              type="password"
+              placeholder="Optional, leave empty to keep current password"
+            />
+          </div>
+          <span id="editUserFormMessage" class="user-form-message"></span>
+          <div class="modal-actions">
+            <button type="button" class="secondary-button" id="cancelEditUserModal">
+              Cancel
+            </button>
+            <button type="submit" class="primary-button">Save changes</button>
+          </div>
+        </form>
+      </div>
+    </div>
+
+    <div class="modal-overlay" id="deleteUserModal" aria-hidden="true">
+      <div class="modal-card user-modal-card">
+        <div class="modal-header">
+          <div>
+            <h3>Delete User</h3>
+            <p>This action cannot be undone.</p>
+          </div>
+          <button
+            class="modal-close"
+            id="closeDeleteUserModal"
+            aria-label="Close delete user modal"
+          >
+            ×
+          </button>
+        </div>
+        <div class="modal-body">
+          <p id="deleteUserMessage"></p>
+          <span id="deleteUserFormMessage" class="user-form-message"></span>
+        </div>
+        <div class="modal-actions">
+          <button type="button" class="secondary-button" id="cancelDeleteUserModal">
+            Cancel
+          </button>
+          <button type="button" class="danger-button" id="confirmDeleteUserModal">
+            Delete User
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <script src="/static/users.js"></script>
+  </body>
+</html>
